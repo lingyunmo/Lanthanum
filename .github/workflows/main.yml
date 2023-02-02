@@ -40,14 +40,14 @@ jobs:
       - name: Publish (Github)
         uses: Kir-Antipov/mc-publish@v3.2                                   
         with:
-          
+
           github-tag: "v${{env.VERSION}}"
           github-token: "${{env.GITHUB_TOKEN}}"
 
           name: "${{env.RELEASE_NAME}}"                             
           version: "${{env.VERSION}}"
           version-type: release
-          changelog-file: CHANGELOG.md                                      
+          changelog-file: CHANGELOG.md
 
           loaders: fabric
           game-versions: "${{env.MINECRAFT_VERSION}}"
