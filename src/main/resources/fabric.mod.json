@@ -9,11 +9,11 @@
     "lingyunmo"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://bzlom.cn/",
+    "sources": "https://github.com/lingyunmo/Lanthanum"
   },
 
-  "license": "CC0-1.0",
+  "license": "MIT",
   "icon": "assets/modid/icon.png",
 
   "environment": "*",

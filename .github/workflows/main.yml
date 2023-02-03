@@ -5,8 +5,8 @@ on: [ pull_request, workflow_dispatch ]
 env:
   MINECRAFT_VERSION: 1.19.3
   JAVA_VERSION: 17
-  VERSION: 0.0.1+1.19.3
-  RELEASE_NAME: Lanthanum Mod 0.0.1 for Minecraft 1.19.3
+  VERSION: 0.0.2+1.19.3
+  RELEASE_NAME: Lanthanum-fabric 0.0.2 for Minecraft 1.19.3
   GITHUB_TOKEN: ${{ secrets.PUBLISH_GITHUB_TOKEN }}           
 
 permissions:
