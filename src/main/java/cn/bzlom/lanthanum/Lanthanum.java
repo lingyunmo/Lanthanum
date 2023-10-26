@@ -1,6 +1,8 @@
 package cn.bzlom.lanthanum;
 
 import cn.bzlom.lanthanum.item.LanthanumFoodComponents;
+import cn.bzlom.lanthanum.registry.ModItemGroup;
+import cn.bzlom.lanthanum.registry.ModItems;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -24,5 +26,7 @@ public class Lanthanum implements ModInitializer {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(content -> {
             content.addAfter(Items.PUMPKIN_PIE, LANTHANUM_STACK_ROTTEN_FLESH);
         });
+        ModItemGroup.registerModItemGroup();
+        ModItems.registerItems();
     }
 }
