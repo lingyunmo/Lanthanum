@@ -18,7 +18,7 @@ import org.slf4j.LoggerFactory;
 public class Lanthanum implements ModInitializer {
     public static final String MOD_ID = "lanthanum";
     public static final Logger LOGGER = LoggerFactory.getLogger("Lanthanum");
-    public static final Item LANTHANUM_STACK_ROTTEN_FLESH = new Item(new FabricItemSettings().food(LanthanumFoodComponents.LANTHANUM_STACK_ROTTEN_FLESH));
+    public static final Item LANTHANUM_STACK_ROTTEN_FLESH = new Item(new FabricItemSettings().food(LanthanumFoodComponents.STACK_ROTTEN_FLESH));
 
     @Override
     public void onInitialize() {
