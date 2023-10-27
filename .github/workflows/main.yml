@@ -5,8 +5,6 @@ on: [ pull_request, workflow_dispatch ]
 env:
   MINECRAFT_VERSION: 1.19.4
   JAVA_VERSION: 17
-  VERSION: 0.0.3+1.19.4
-  RELEASE_NAME: Lanthanum-fabric 0.0.3 for Minecraft 1.19.4
   GITHUB_TOKEN: ${{ secrets.PUBLISH_GITHUB_TOKEN }}           
 
 permissions:
@@ -34,6 +32,11 @@ jobs:
         if: ${{ runner.os != 'Windows' }}
         run: chmod +x ./gradlew
 
+      - name: Read Version from gradle.properties
+        run: |
+          VERSION=$(grep 'mod_version' gradle.properties | awk -F'=' '{print $2}' | xargs)
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+
       - name: Build
         run: ./gradlew clean build
         
@@ -44,8 +47,8 @@ jobs:
           github-tag: "v${{env.VERSION}}"
           github-token: "${{env.GITHUB_TOKEN}}"
 
-          name: "${{env.RELEASE_NAME}}"                             
-          version: "${{env.VERSION}}"
+          name: "Lanthanum-fabric ${{ env.VERSION }} for Minecraft ${{ env.MINECRAFT_VERSION }}"
+          version: "${{ env.VERSION }}"
           version-type: release
 
           loaders: fabric
