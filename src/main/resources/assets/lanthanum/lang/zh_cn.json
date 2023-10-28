@@ -1,6 +1,8 @@
 {
   "item.lanthanum.gemstone": "宝石",
   "item.lanthanum.raw_gemstone": "宝石原矿",
+  "item.lanthanum.gemstone_block": "宝石块",
   "item.lanthanum.lanthanum_stack_rotten_flesh": "堆腐烂的肉（机翻）",
   "itemGroup.lanthanum.gemstone": "'镧' 的宝石"
+
 }
