@@ -18,6 +18,9 @@ public class ModItems {
     public static final Item RAW_GEMSTONE = registerItem("raw_gemstone",
             new Item(new FabricItemSettings()),
             ModItemGroup.GEMSTONE,ItemGroups.INGREDIENTS);
+    public static final Item GEMSTONE_BLOCK = registerItem("gemstone_block",
+            new Item(new FabricItemSettings()),
+            ModItemGroup.GEMSTONE, ItemGroups.INGREDIENTS);
     public static Item registerItem(String name, Item item, ItemGroup... itemGroups){
         Item registeredItem = Registry.register(Registries.ITEM,new Identifier(Lanthanum.MOD_ID,name),item);
         for (ItemGroup itemGroup : itemGroups){
