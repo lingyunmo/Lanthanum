@@ -1,7 +1,9 @@
 {
   "item.lanthanum.gemstone": "GemStone",
   "item.lanthanum.raw_gemstone": "Raw GemStone",
-  "item.lanthanum.gemstone_block": "GemStone Block",
-  "item.lanthanum.lanthanum_stack_rotten_flesh": "Stack Rotten Flesh",
+  "block.lanthanum.gemstone_block": "GemStone Block",
+  "block.lanthanum.gemstone_ore": "GemStone Ore",
+  "block.lanthanum.deep_slate_gemstone_ore": "DeepSlate GemStone Ore",
+  "item.lanthanum.stack_rotten_flesh": "Stack Rotten Flesh",
   "itemGroup.lanthanum.gemstone": "lanthanum's stone"
 }
