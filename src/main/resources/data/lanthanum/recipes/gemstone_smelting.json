@@ -1,9 +1,0 @@
-{
-  "type": "smelting",
-  "ingredient": {
-    "item": "lanthanum:raw_gemstone"
-  },
-  "result": "lanthanum:gemstone",
-  "experience": 0.7,
-  "cookingtime": 400
-}

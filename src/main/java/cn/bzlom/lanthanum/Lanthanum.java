@@ -4,7 +4,6 @@ import cn.bzlom.lanthanum.item.LanthanumFoodComponents;
 import cn.bzlom.lanthanum.registry.ModBlocks;
 import cn.bzlom.lanthanum.registry.ModItemGroup;
 import cn.bzlom.lanthanum.registry.ModItems;
-import cn.bzlom.lanthanum.registry.ModOreGen;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -31,6 +30,5 @@ public class Lanthanum implements ModInitializer {
         ModItemGroup.registerModItemGroup();
         ModItems.registerItems();
         ModBlocks.registerModBlocks();
-        ModOreGen.generateOres();
     }
 }
