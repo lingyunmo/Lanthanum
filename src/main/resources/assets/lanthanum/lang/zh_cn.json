@@ -5,5 +5,10 @@
   "block.lanthanum.gemstone_ore": "宝石矿石",
   "block.lanthanum.deep_slate_gemstone_ore": "深层宝石矿石",
   "item.lanthanum.stack_rotten_flesh": "堆腐烂的肉（机翻）",
-  "itemGroup.lanthanum.gemstone": "'镧' 的宝石"
+  "itemGroup.lanthanum.gemstone": "'镧' 的宝石",
+  "item.lanthanum.gemstone_sword": "'镧' 的宝石 剑",
+  "item.lanthanum.gemstone_shovel": "'镧' 的宝石 锹",
+  "item.lanthanum.gemstone_pickaxe": "'镧' 的宝石 镐",
+  "item.lanthanum.gemstone_axe": "'镧' 的宝石 斧",
+  "item.lanthanum.gemstone_hoe": "'镧' 的宝石 锄"
 }
