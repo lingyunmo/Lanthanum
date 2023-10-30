@@ -2,11 +2,11 @@ package cn.bzlom.lanthanum;
 
 import cn.bzlom.lanthanum.registry.ModOreConfiguredFeatures;
 import cn.bzlom.lanthanum.registry.ModOrePlacedFeatures;
+import cn.bzlom.lanthanum.registry.ModWorldGen;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.registry.RegistryBuilder;
 import net.minecraft.registry.RegistryKeys;
-import cn.bzlom.lanthanum.registry.ModWorldGen;
 
 public class LanthanumDataGenerator implements DataGeneratorEntrypoint {
     @Override

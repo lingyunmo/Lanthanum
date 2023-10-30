@@ -23,7 +23,7 @@ public class ModOrePlacedFeatures {
     }
 
     public static RegistryKey<PlacedFeature> registerKey(String name) {
-        return RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(Lanthanum.MOD_ID,name));
+        return RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(Lanthanum.MOD_ID, name));
     }
 
     public static List<PlacementModifier> modifiers(PlacementModifier countModifier, PlacementModifier heightModifier) {

@@ -23,10 +23,11 @@ public class ModOreConfiguredFeatures {
     public ModOreConfiguredFeatures() {
     }
 
-    public static RegistryKey<ConfiguredFeature<?,?>> registerKey(String name){
-        return RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE,new Identifier(Lanthanum.MOD_ID,name));
+    public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {
+        return RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, new Identifier(Lanthanum.MOD_ID, name));
     }
-    public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> featureRegisterable){
+
+    public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> featureRegisterable) {
         RuleTest shallow = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
         RuleTest deepslate = new TagMatchRuleTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
 

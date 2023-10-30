@@ -19,15 +19,17 @@ public class ModBlocks {
             ModItemGroup.GEMSTONE);
     public static final Block GEMSTONE_ORE = registerBlock("gemstone_ore",
             new ExperienceDroppingBlock(FabricBlockSettings.of(Material.STONE).strength(8.0f).requiresTool(),
-            UniformIntProvider.create(4,8)),ModItemGroup.GEMSTONE);
+                    UniformIntProvider.create(4, 8)), ModItemGroup.GEMSTONE);
     public static final Block DEEP_SLATE_GEMSTONE_ORE = registerBlock("deep_slate_gemstone_ore",
             new ExperienceDroppingBlock(FabricBlockSettings.of(Material.STONE).strength(8.0f).requiresTool(),
-                    UniformIntProvider.create(4,8)),ModItemGroup.GEMSTONE);
-    public static Block registerBlock(String name, Block block, ItemGroup... itemGroups){
-        ModItems.registerItem(name,new BlockItem(block,new FabricItemSettings()),itemGroups);
-        return Registry.register(Registries.BLOCK,new Identifier(Lanthanum.MOD_ID,name),block);
+                    UniformIntProvider.create(4, 8)), ModItemGroup.GEMSTONE);
+
+    public static Block registerBlock(String name, Block block, ItemGroup... itemGroups) {
+        ModItems.registerItem(name, new BlockItem(block, new FabricItemSettings()), itemGroups);
+        return Registry.register(Registries.BLOCK, new Identifier(Lanthanum.MOD_ID, name), block);
     }
-    public static void registerModBlocks(){
-        Lanthanum.LOGGER.debug("Registering mod blocks for"+ Lanthanum.MOD_ID);
+
+    public static void registerModBlocks() {
+        Lanthanum.LOGGER.debug("Registering mod blocks for" + Lanthanum.MOD_ID);
     }
 }

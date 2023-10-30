@@ -17,8 +17,6 @@ import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.awt.*;
-
 public class Lanthanum implements ModInitializer {
     public static final String MOD_ID = "lanthanum";
     public static final Logger LOGGER = LoggerFactory.getLogger("Lanthanum");
