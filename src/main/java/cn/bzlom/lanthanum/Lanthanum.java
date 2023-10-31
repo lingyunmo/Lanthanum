@@ -25,9 +25,7 @@ public class Lanthanum implements ModInitializer {
     @Override
     public void onInitialize() {
         Registry.register(Registries.ITEM, new Identifier(MOD_ID, "stack_rotten_flesh"), STACK_ROTTEN_FLESH);
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(content -> {
-            content.addAfter(Items.PUMPKIN_PIE, STACK_ROTTEN_FLESH);
-        });
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(content -> content.addAfter(Items.PUMPKIN_PIE, STACK_ROTTEN_FLESH));
         ModItemGroup.registerModItemGroup();
         ModItems.registerItems();
         ModBlocks.registerModBlocks();
