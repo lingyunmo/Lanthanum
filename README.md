@@ -20,7 +20,6 @@ Thank you for your support and for using the Lanthanum Mod!
 
 If you have any suggestions, feedback, or contributions to offer, please feel free to get in touch with us.
 
-
 ## Contributing
 
 We welcome contributions to this project. To ensure a smooth and efficient development process, please follow these common contribution guidelines:
@@ -30,13 +29,30 @@ We welcome contributions to this project. To ensure a smooth and efficient devel
 - **Feature Requests:** If you have ideas for new features or improvements, open an issue to discuss them.
 
 - **Pull Requests:** We encourage you to submit pull requests for bug fixes and new features. When submitting a pull request, please keep in mind the following:
-    - Ensure that your code adheres to our coding standards.
-    - Provide a clear and concise description of your changes.
-    - Include relevant tests if applicable.
-    - Do not make changes to the `gradle.properties` file.
-    - Do not change the master branch directly.
+  - Ensure that your code adheres to our coding standards.
+  - Provide a clear and concise description of your changes.
+  - Include relevant tests if applicable.
+  - Do not make changes to the `gradle.properties` file.
+  - Do not change the master branch directly.
+
+  ### Branch Workflow
+
+  To contribute, co-authors are required to adhere to our branch workflow:
+  1. Create a new branch for your contribution.
+  2. Name your branch descriptively.
+  3. Make your changes in the branch.
+  4. Submit a pull request to the `master` branch for review.
+  5. Your changes will be merged after approval and passing necessary tests.
 
 By contributing to this project, you agree to license your code under the MIT License.
+
+## Development Standards
+
+To maintain code quality and consistency, please adhere to our development standards:
+- Follow established coding style guidelines.
+- Write clear and concise code comments.
+- Document your code as needed.
+- Perform thorough testing of your changes.
 
 ## License
 
