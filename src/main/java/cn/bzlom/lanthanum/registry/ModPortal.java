@@ -2,8 +2,6 @@ package cn.bzlom.lanthanum.registry;
 
 import cn.bzlom.lanthanum.Lanthanum;
 import net.kyrptonaught.customportalapi.api.CustomPortalBuilder;
-import net.minecraft.block.LanternBlock;
-import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.util.Identifier;
 
