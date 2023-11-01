@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "lanthanum:block/deep_slate_lanthanum_ore"
+  }
+}

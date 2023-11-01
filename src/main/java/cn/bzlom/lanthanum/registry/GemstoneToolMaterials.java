@@ -6,10 +6,9 @@ import net.minecraft.util.Lazy;
 
 import java.util.function.Supplier;
 
-public enum ModToolMaterials implements ToolMaterial {
-    GEMSTONE(2, 150, 14.0F, 3F, 22, () -> {
-        return Ingredient.ofItems(ModItems.GEMSTONE);
-    });
+public enum GemstoneToolMaterials implements ToolMaterial {
+    GEMSTONE(2, 150, 14.0F, 3F, 22, ()
+            -> Ingredient.ofItems(ModItems.GEMSTONE));
 
     private final int miningLevel;
     private final int itemDurability;
@@ -18,7 +17,7 @@ public enum ModToolMaterials implements ToolMaterial {
     private final int enchantability;
     private final Lazy<Ingredient> repairIngredient;
 
-    private ModToolMaterials(int miningLevel, int itemDurability, float miningSpeed, float attackDamage, int enchantability, Supplier repairIngredient) {
+    private GemstoneToolMaterials(int miningLevel, int itemDurability, float miningSpeed, float attackDamage, int enchantability, Supplier repairIngredient) {
         this.miningLevel = miningLevel;
         this.itemDurability = itemDurability;
         this.miningSpeed = miningSpeed;

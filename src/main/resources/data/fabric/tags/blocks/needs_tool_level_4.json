@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "lanthanum:gemstone_block"
+    "lanthanum:gemstone_block",
+    "lanthanum:lanthanum_block"
   ]
 }
