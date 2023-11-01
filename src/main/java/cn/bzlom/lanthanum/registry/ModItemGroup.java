@@ -8,8 +8,8 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 public class ModItemGroup {
-    public static ItemGroup LanthanumBase = FabricItemGroup.builder(new Identifier(Lanthanum.MOD_ID, "gemstone"))
-            .displayName(Text.translatable("itemGroup.lanthanum.lanthanumBase"))
+    public static ItemGroup GEMSTONE = FabricItemGroup.builder(new Identifier(Lanthanum.MOD_ID, "gemstone"))
+            .displayName(Text.translatable("itemGroup.lanthanum.gemstone"))
             .icon(() -> new ItemStack(ModItems.GEMSTONE))
             .build();
 

@@ -1,26 +1,14 @@
 {
-  "itemGroup.lanthanum.lanthanumBase": "鑭 基礎",
-  "item.lanthanum.stack_rotten_flesh": "堆疊爛肉",
-
   "item.lanthanum.gemstone": "寶石",
   "item.lanthanum.raw_gemstone": "寶石原礦",
-  "block.lanthanum.gemstone_block": "寶石方塊",
+  "block.lanthanum.gemstone_block": "寶石塊",
   "block.lanthanum.gemstone_ore": "寶石礦石",
   "block.lanthanum.deep_slate_gemstone_ore": "深層寶石礦石",
-  "item.lanthanum.gemstone_sword": "寶石劍",
-  "item.lanthanum.gemstone_shovel": "寶石鏟",
-  "item.lanthanum.gemstone_pickaxe": "寶石鎬",
-  "item.lanthanum.gemstone_axe": "寶石斧",
-  "item.lanthanum.gemstone_hoe": "寶石鋤",
-
-  "item.lanthanum.lanthanum": "鑭礦",
-  "item.lanthanum.raw_lanthanum": "鑭原礦",
-  "block.lanthanum.lanthanum_block": "鑭方塊",
-  "block.lanthanum.lanthanum_ore": "鑭礦石",
-  "block.lanthanum.deep_slate_lanthanum_ore": "深層鑭礦石",
-  "item.lanthanum.lanthanum_sword": "鑭劍",
-  "item.lanthanum.lanthanum_shovel": "鑭鏟",
-  "item.lanthanum.lanthanum_pickaxe": "鑭鎬",
-  "item.lanthanum.lanthanum_axe": "鑭斧",
-  "item.lanthanum.lanthanum_hoe": "鑭鋤"
+  "item.lanthanum.stack_rotten_flesh": "腐爛肉堆",
+  "itemGroup.lanthanum.gemstone": "‘鑭’ 的寶石",
+  "item.lanthanum.gemstone_sword": "‘鑭’ 的寶石 劍",
+  "item.lanthanum.gemstone_shovel": "‘鑭’ 的寶石 鏟",
+  "item.lanthanum.gemstone_pickaxe": "‘鑭’ 的寶石 鎬",
+  "item.lanthanum.gemstone_axe": "‘鑭’ 的寶石 斧",
+  "item.lanthanum.gemstone_hoe": "‘鑭’ 的寶石 鋤"
 }
