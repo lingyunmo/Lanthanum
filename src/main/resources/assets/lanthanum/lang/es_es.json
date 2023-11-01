@@ -1,14 +1,26 @@
 {
-  "item.lanthanum.gemstone": "Gema",
-  "item.lanthanum.raw_gemstone": "Gema en bruto",
-  "block.lanthanum.gemstone_block": "Bloque de gema",
-  "block.lanthanum.gemstone_ore": "Menas de gema",
-  "block.lanthanum.deep_slate_gemstone_ore": "Menas de gema de pizarra profunda",
+  "itemGroup.lanthanum.lanthanumBase": "Lantano Base",
   "item.lanthanum.stack_rotten_flesh": "Pila de carne podrida",
-  "itemGroup.lanthanum.gemstone": "Piedra de 'Lantano'",
-  "item.lanthanum.gemstone_sword": "Espada de gema",
-  "item.lanthanum.gemstone_shovel": "Pala de gema",
-  "item.lanthanum.gemstone_pickaxe": "Pico de gema",
-  "item.lanthanum.gemstone_axe": "Hacha de gema",
-  "item.lanthanum.gemstone_hoe": "Azada de gema"
+
+  "item.lanthanum.gemstone": "Gema",
+  "item.lanthanum.raw_gemstone": "Gema Cruda",
+  "block.lanthanum.gemstone_block": "Bloque de Gema",
+  "block.lanthanum.gemstone_ore": "Menachita",
+  "block.lanthanum.deep_slate_gemstone_ore": "Menachita de Esquisto Profundo",
+  "item.lanthanum.gemstone_sword": "Espada de Gema",
+  "item.lanthanum.gemstone_shovel": "Pala de Gema",
+  "item.lanthanum.gemstone_pickaxe": "Pico de Gema",
+  "item.lanthanum.gemstone_axe": "Hacha de Gema",
+  "item.lanthanum.gemstone_hoe": "Azada de Gema",
+
+  "item.lanthanum.lanthanum": "Lantano",
+  "item.lanthanum.raw_lanthanum": "Lantano Crudo",
+  "block.lanthanum.lanthanum_block": "Bloque de Lantano",
+  "block.lanthanum.lanthanum_ore": "Menachita de Lantano",
+  "block.lanthanum.deep_slate_lanthanum_ore": "Menachita de Lantano de Esquisto Profundo",
+  "item.lanthanum.lanthanum_sword": "Espada de Lantano",
+  "item.lanthanum.lanthanum_shovel": "Pala de Lantano",
+  "item.lanthanum.lanthanum_pickaxe": "Pico de Lantano",
+  "item.lanthanum.lanthanum_axe": "Hacha de Lantano",
+  "item.lanthanum.lanthanum_hoe": "Azada de Lantano"
 }
