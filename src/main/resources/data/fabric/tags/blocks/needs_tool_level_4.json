@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "lanthanum:gemstone_block"
+    "lanthanum:gemstone_block",
+    "lanthanum:lanthanum_ore",
+    "lanthanum:deep_slate_lanthanum_ore",
+    "lanthanum:lanthanum_block"
   ]
 }
