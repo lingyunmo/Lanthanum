@@ -1,0 +1,14 @@
+{
+  "item.lanthanum.gemstone": "Gema",
+  "item.lanthanum.raw_gemstone": "Gema en bruto",
+  "block.lanthanum.gemstone_block": "Bloque de gema",
+  "block.lanthanum.gemstone_ore": "Menas de gema",
+  "block.lanthanum.deep_slate_gemstone_ore": "Menas de gema de pizarra profunda",
+  "item.lanthanum.stack_rotten_flesh": "Pila de carne podrida",
+  "itemGroup.lanthanum.gemstone": "Piedra de 'Lantano'",
+  "item.lanthanum.gemstone_sword": "Espada de gema",
+  "item.lanthanum.gemstone_shovel": "Pala de gema",
+  "item.lanthanum.gemstone_pickaxe": "Pico de gema",
+  "item.lanthanum.gemstone_axe": "Hacha de gema",
+  "item.lanthanum.gemstone_hoe": "Azada de gema"
+}

@@ -1,0 +1,14 @@
+{
+  "item.lanthanum.gemstone": "Gemme",
+  "item.lanthanum.raw_gemstone": "Gemme brute",
+  "block.lanthanum.gemstone_block": "Bloc de gemme",
+  "block.lanthanum.gemstone_ore": "Minerai de gemme",
+  "block.lanthanum.deep_slate_gemstone_ore": "Minerai de gemme en schiste profond",
+  "item.lanthanum.stack_rotten_flesh": "Pile de chair pourrie",
+  "itemGroup.lanthanum.gemstone": "Pierre de 'lanthane'",
+  "item.lanthanum.gemstone_sword": "Épée en gemme",
+  "item.lanthanum.gemstone_shovel": "Pelle en gemme",
+  "item.lanthanum.gemstone_pickaxe": "Pioche en gemme",
+  "item.lanthanum.gemstone_axe": "Hache en gemme",
+  "item.lanthanum.gemstone_hoe": "Houe en gemme"
+}
