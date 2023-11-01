@@ -60,6 +60,7 @@ public class ModOrePlacedFeatures {
         RegistryEntry<ConfiguredFeature<?, ?>> registryEntry3 = registryEntryLookup.getOrThrow(ModOreConfiguredFeatures.LANTHANUM_ORE);
         RegistryEntry<ConfiguredFeature<?, ?>> registryEntry4 = registryEntryLookup.getOrThrow(ModOreConfiguredFeatures.LANTHANUM_ORE_BURIED);
 
+
         register(featureRegisterable, LANTHANUM_ORE_UPPER, registryEntry3, modifiersWithCount(50, HeightRangePlacementModifier.uniform(YOffset.fixed(32), YOffset.fixed(256))));
         register(featureRegisterable, LANTHANUM_ORE_MIDDLE, registryEntry4, modifiersWithCount(4, HeightRangePlacementModifier.trapezoid(YOffset.fixed(-64), YOffset.fixed(32))));
         register(featureRegisterable, LANTHANUM_ORE_SMALL, registryEntry4, modifiers(CountPlacementModifier.of(UniformIntProvider.create(0, 1)), HeightRangePlacementModifier.uniform(YOffset.fixed(-64), YOffset.fixed(-48))));
