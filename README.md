@@ -1,5 +1,14 @@
 # A Minecraft Mod with Fabric
 
+## Language Selection / 语言选择
+
+- [English](README.md)
+- [简体中文 (Simplified Chinese)](README_ZH.md)
+- [繁體中文 (Traditional Chinese)](README_TW.md)
+- [Français (French)](README_FR.md)
+- [日本語 (Japanese)](README_JA.md)
+- [Español (Spanish)](README_ES.md)
+
 ## About the Lanthanum Mod
 
 Welcome to the Lanthanum Mod! This mod is inspired by my fondness for the Chinese character "镧" (Lanthanum).
