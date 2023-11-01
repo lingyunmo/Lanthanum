@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-    "lanthanum:deep_slate_gemstone_ore"
+    "lanthanum:deep_slate_gemstone_ore",
+    "lanthanum:lanthanum_ore",
+    "lanthanum:deep_slate_lanthanum_ore"
   ]
 }

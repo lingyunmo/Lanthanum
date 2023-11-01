@@ -1,0 +1,9 @@
+{
+  "type": "smelting",
+  "ingredient": {
+    "item": "lanthanum:raw_lanthanum"
+  },
+  "result": "lanthanum:lanthanum",
+  "experience": 0.7,
+  "cookingtime": 400
+}
