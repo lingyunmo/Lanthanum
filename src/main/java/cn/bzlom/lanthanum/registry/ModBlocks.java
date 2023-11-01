@@ -14,27 +14,15 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 
 public class ModBlocks {
-    //Gemstone family
     public static final Block GEMSTONE_BLOCK = registerBlock("gemstone_block",
             new Block(FabricBlockSettings.of(Material.METAL).strength(8.0f).requiresTool()),
-            ModItemGroup.LanthanumBase);
+            ModItemGroup.GEMSTONE);
     public static final Block GEMSTONE_ORE = registerBlock("gemstone_ore",
             new ExperienceDroppingBlock(FabricBlockSettings.of(Material.STONE).strength(8.0f).requiresTool(),
-                    UniformIntProvider.create(4, 8)), ModItemGroup.LanthanumBase);
+                    UniformIntProvider.create(4, 8)), ModItemGroup.GEMSTONE);
     public static final Block DEEP_SLATE_GEMSTONE_ORE = registerBlock("deep_slate_gemstone_ore",
             new ExperienceDroppingBlock(FabricBlockSettings.of(Material.STONE).strength(8.0f).requiresTool(),
-                    UniformIntProvider.create(4, 8)), ModItemGroup.LanthanumBase);
-
-    //lanthanum family
-    public static final Block LANTHANUM_BLOCK = registerBlock("lanthanum_block",
-            new Block(FabricBlockSettings.of(Material.METAL).strength(8.0f).requiresTool()),
-            ModItemGroup.LanthanumBase);
-    public static final Block LANTHANUM_ORE = registerBlock("lanthanum_ore",
-            new ExperienceDroppingBlock(FabricBlockSettings.of(Material.STONE).strength(8.0f).requiresTool(),
-                    UniformIntProvider.create(4, 8)), ModItemGroup.LanthanumBase);
-    public static final Block DEEP_SLATE_LANTHANUM_ORE = registerBlock("deep_slate_lanthanum_ore",
-            new ExperienceDroppingBlock(FabricBlockSettings.of(Material.STONE).strength(8.0f).requiresTool(),
-                    UniformIntProvider.create(4, 8)), ModItemGroup.LanthanumBase);
+                    UniformIntProvider.create(4, 8)), ModItemGroup.GEMSTONE);
 
     public static Block registerBlock(String name, Block block, ItemGroup... itemGroups) {
         ModItems.registerItem(name, new BlockItem(block, new FabricItemSettings()), itemGroups);

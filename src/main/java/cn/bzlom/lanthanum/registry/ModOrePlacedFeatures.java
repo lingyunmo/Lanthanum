@@ -15,16 +15,9 @@ import net.minecraft.world.gen.placementmodifier.*;
 import java.util.List;
 
 public class ModOrePlacedFeatures {
-
-    //Gemstone family
     public static final RegistryKey<PlacedFeature> GEMSTONE_ORE_UPPER = registerKey("gemstone_ore_upper");
     public static final RegistryKey<PlacedFeature> GEMSTONE_ORE_MIDDLE = registerKey("gemstone_ore_middle");
     public static final RegistryKey<PlacedFeature> GEMSTONE_ORE_SMALL = registerKey("gemstone_ore_small");
-
-    //Lanthanum family
-    public static final RegistryKey<PlacedFeature> LANTHANUM_ORE_UPPER = registerKey("lanthanum_ore_upper");
-    public static final RegistryKey<PlacedFeature> LANTHANUM_ORE_MIDDLE = registerKey("lanthanum_ore_middle");
-    public static final RegistryKey<PlacedFeature> LANTHANUM_ORE_SMALL = registerKey("lanthanum_ore_small");
 
     public ModOrePlacedFeatures() {
     }
@@ -46,24 +39,16 @@ public class ModOrePlacedFeatures {
     }
 
     public static void bootstrap(Registerable<PlacedFeature> featureRegisterable) {
+
         var registryEntryLookup = featureRegisterable.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
-        //Gemstone
+
         RegistryEntry<ConfiguredFeature<?, ?>> registryEntry1 = registryEntryLookup.getOrThrow(ModOreConfiguredFeatures.GEMSTONE_ORE);
         RegistryEntry<ConfiguredFeature<?, ?>> registryEntry2 = registryEntryLookup.getOrThrow(ModOreConfiguredFeatures.GEMSTONE_ORE_BURIED);
 
         register(featureRegisterable, GEMSTONE_ORE_UPPER, registryEntry1, modifiersWithCount(50, HeightRangePlacementModifier.uniform(YOffset.fixed(32), YOffset.fixed(256))));
         register(featureRegisterable, GEMSTONE_ORE_MIDDLE, registryEntry2, modifiersWithCount(4, HeightRangePlacementModifier.trapezoid(YOffset.fixed(-64), YOffset.fixed(32))));
         register(featureRegisterable, GEMSTONE_ORE_SMALL, registryEntry2, modifiers(CountPlacementModifier.of(UniformIntProvider.create(0, 1)), HeightRangePlacementModifier.uniform(YOffset.fixed(-64), YOffset.fixed(-48))));
-
-        //Lanthanum
-        RegistryEntry<ConfiguredFeature<?, ?>> registryEntry3 = registryEntryLookup.getOrThrow(ModOreConfiguredFeatures.LANTHANUM_ORE);
-        RegistryEntry<ConfiguredFeature<?, ?>> registryEntry4 = registryEntryLookup.getOrThrow(ModOreConfiguredFeatures.LANTHANUM_ORE_BURIED);
-
-
-        register(featureRegisterable, LANTHANUM_ORE_UPPER, registryEntry3, modifiersWithCount(50, HeightRangePlacementModifier.uniform(YOffset.fixed(32), YOffset.fixed(256))));
-        register(featureRegisterable, LANTHANUM_ORE_MIDDLE, registryEntry4, modifiersWithCount(4, HeightRangePlacementModifier.trapezoid(YOffset.fixed(-64), YOffset.fixed(32))));
-        register(featureRegisterable, LANTHANUM_ORE_SMALL, registryEntry4, modifiers(CountPlacementModifier.of(UniformIntProvider.create(0, 1)), HeightRangePlacementModifier.uniform(YOffset.fixed(-64), YOffset.fixed(-48))));
     }
 
 

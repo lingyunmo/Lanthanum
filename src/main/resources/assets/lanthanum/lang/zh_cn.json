@@ -1,26 +1,14 @@
 {
-  "itemGroup.lanthanum.lanthanumBase": "镧 基本",
-  "item.lanthanum.stack_rotten_flesh": "堆起来的腐烂的肉",
-
   "item.lanthanum.gemstone": "宝石",
   "item.lanthanum.raw_gemstone": "宝石原矿",
   "block.lanthanum.gemstone_block": "宝石块",
   "block.lanthanum.gemstone_ore": "宝石矿石",
   "block.lanthanum.deep_slate_gemstone_ore": "深层宝石矿石",
-  "item.lanthanum.gemstone_sword": "宝石 剑",
-  "item.lanthanum.gemstone_shovel": "宝石 锹",
-  "item.lanthanum.gemstone_pickaxe": "宝石 镐",
-  "item.lanthanum.gemstone_axe": "宝石 斧",
-  "item.lanthanum.gemstone_hoe": "宝石 锄",
-
-  "item.lanthanum.lanthanum": "镧矿",
-  "item.lanthanum.raw_lanthanum": "镧原矿",
-  "block.lanthanum.lanthanum_block": "镧块",
-  "block.lanthanum.lanthanum_ore": "镧矿石",
-  "block.lanthanum.deep_slate_lanthanum_ore": "深层镧矿石",
-  "item.lanthanum.lanthanum_sword": "镧 剑",
-  "item.lanthanum.lanthanum_shovel": "镧 锹",
-  "item.lanthanum.lanthanum_pickaxe": "镧 镐",
-  "item.lanthanum.lanthanum_axe": "镧 斧",
-  "item.lanthanum.lanthanum_hoe": "镧 锄"
+  "item.lanthanum.stack_rotten_flesh": "堆腐烂的肉（机翻）",
+  "itemGroup.lanthanum.gemstone": "'镧' 的宝石",
+  "item.lanthanum.gemstone_sword": "'镧' 的宝石 剑",
+  "item.lanthanum.gemstone_shovel": "'镧' 的宝石 锹",
+  "item.lanthanum.gemstone_pickaxe": "'镧' 的宝石 镐",
+  "item.lanthanum.gemstone_axe": "'镧' 的宝石 斧",
+  "item.lanthanum.gemstone_hoe": "'镧' 的宝石 锄"
 }

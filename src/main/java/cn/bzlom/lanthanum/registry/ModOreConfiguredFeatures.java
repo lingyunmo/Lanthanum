@@ -17,14 +17,8 @@ import net.minecraft.world.gen.feature.OreFeatureConfig;
 import java.util.List;
 
 public class ModOreConfiguredFeatures {
-    //Gemstone
     public static final RegistryKey<ConfiguredFeature<?, ?>> GEMSTONE_ORE = registerKey("gemstone_ore");
     public static final RegistryKey<ConfiguredFeature<?, ?>> GEMSTONE_ORE_BURIED = registerKey("gemstone_ore_buried");
-
-    //Lanthanum
-
-    public static final RegistryKey<ConfiguredFeature<?, ?>> LANTHANUM_ORE = registerKey("lanthanum_ore");
-    public static final RegistryKey<ConfiguredFeature<?, ?>> LANTHANUM_ORE_BURIED = registerKey("lanthanum_ore_buried");
 
     public ModOreConfiguredFeatures() {
     }
@@ -37,17 +31,10 @@ public class ModOreConfiguredFeatures {
         RuleTest shallow = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
         RuleTest deepslate = new TagMatchRuleTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
 
-        //Gemstone
         List<OreFeatureConfig.Target> overworld_silver_ore = List.of(OreFeatureConfig.createTarget(shallow, ModBlocks.GEMSTONE_ORE.getDefaultState()), OreFeatureConfig.createTarget(deepslate, ModBlocks.DEEP_SLATE_GEMSTONE_ORE.getDefaultState()));
 
         register(featureRegisterable, GEMSTONE_ORE, Feature.ORE, new OreFeatureConfig(overworld_silver_ore, 9));
         register(featureRegisterable, GEMSTONE_ORE_BURIED, Feature.ORE, new OreFeatureConfig(overworld_silver_ore, 9, 0.7F));
-
-        //Lanthanum
-        List<OreFeatureConfig.Target> overworld_lanthanum_ore = List.of(OreFeatureConfig.createTarget(shallow, ModBlocks.LANTHANUM_ORE.getDefaultState()), OreFeatureConfig.createTarget(deepslate, ModBlocks.DEEP_SLATE_LANTHANUM_ORE.getDefaultState()));
-
-        register(featureRegisterable, LANTHANUM_ORE, Feature.ORE, new OreFeatureConfig(overworld_lanthanum_ore, 20));
-        register(featureRegisterable, LANTHANUM_ORE_BURIED, Feature.ORE, new OreFeatureConfig(overworld_lanthanum_ore, 20, 0.7F));
     }
 
     public static <FC extends FeatureConfig, F extends Feature<FC>> void register(Registerable<ConfiguredFeature<?, ?>> registerable, RegistryKey<ConfiguredFeature<?, ?>> key, F feature, FC config) {
