@@ -1,5 +1,6 @@
-package cn.bzlom.lanthanum.registry;
+package cn.bzlom.lanthanum.item;
 
+import cn.bzlom.lanthanum.registry.ModItems;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.util.Lazy;

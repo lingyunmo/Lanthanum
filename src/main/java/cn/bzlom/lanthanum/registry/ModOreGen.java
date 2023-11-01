@@ -1,5 +1,6 @@
 package cn.bzlom.lanthanum.registry;
 
+import cn.bzlom.lanthanum.item.ModOrePlacedFeatures;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.minecraft.world.gen.GenerationStep;

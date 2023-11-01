@@ -1,7 +1,8 @@
-package cn.bzlom.lanthanum.registry;
+package cn.bzlom.lanthanum.item;
 
 
 import cn.bzlom.lanthanum.Lanthanum;
+import cn.bzlom.lanthanum.registry.ModBlocks;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
@@ -46,8 +47,8 @@ public class ModOreConfiguredFeatures {
         //Lanthanum
         List<OreFeatureConfig.Target> overworld_lanthanum_ore = List.of(OreFeatureConfig.createTarget(shallow, ModBlocks.LANTHANUM_ORE.getDefaultState()), OreFeatureConfig.createTarget(deepslate, ModBlocks.DEEP_SLATE_LANTHANUM_ORE.getDefaultState()));
 
-        register(featureRegisterable, LANTHANUM_ORE, Feature.ORE, new OreFeatureConfig(overworld_lanthanum_ore, 20));
-        register(featureRegisterable, LANTHANUM_ORE_BURIED, Feature.ORE, new OreFeatureConfig(overworld_lanthanum_ore, 20, 0.7F));
+        register(featureRegisterable, LANTHANUM_ORE, Feature.ORE, new OreFeatureConfig(overworld_lanthanum_ore, 2));
+        register(featureRegisterable, LANTHANUM_ORE_BURIED, Feature.ORE, new OreFeatureConfig(overworld_lanthanum_ore, 2, 0.7F));
     }
 
     public static <FC extends FeatureConfig, F extends Feature<FC>> void register(Registerable<ConfiguredFeature<?, ?>> registerable, RegistryKey<ConfiguredFeature<?, ?>> key, F feature, FC config) {
