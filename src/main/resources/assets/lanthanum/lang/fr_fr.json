@@ -1,14 +1,26 @@
 {
-  "item.lanthanum.gemstone": "Gemme",
-  "item.lanthanum.raw_gemstone": "Gemme brute",
-  "block.lanthanum.gemstone_block": "Bloc de gemme",
-  "block.lanthanum.gemstone_ore": "Minerai de gemme",
-  "block.lanthanum.deep_slate_gemstone_ore": "Minerai de gemme en schiste profond",
+  "itemGroup.lanthanum.lanthanumBase": "Lanthane de base",
   "item.lanthanum.stack_rotten_flesh": "Pile de chair pourrie",
-  "itemGroup.lanthanum.gemstone": "Pierre de 'lanthane'",
-  "item.lanthanum.gemstone_sword": "Épée en gemme",
-  "item.lanthanum.gemstone_shovel": "Pelle en gemme",
-  "item.lanthanum.gemstone_pickaxe": "Pioche en gemme",
-  "item.lanthanum.gemstone_axe": "Hache en gemme",
-  "item.lanthanum.gemstone_hoe": "Houe en gemme"
+
+  "item.lanthanum.gemstone": "Pierre précieuse",
+  "item.lanthanum.raw_gemstone": "Minerai brut de pierre précieuse",
+  "block.lanthanum.gemstone_block": "Bloc de pierre précieuse",
+  "block.lanthanum.gemstone_ore": "Minerai de pierre précieuse",
+  "block.lanthanum.deep_slate_gemstone_ore": "Minerai de pierre précieuse des ardoises profondes",
+  "item.lanthanum.gemstone_sword": "Épée en pierre précieuse",
+  "item.lanthanum.gemstone_shovel": "Pelle en pierre précieuse",
+  "item.lanthanum.gemstone_pickaxe": "Pioche en pierre précieuse",
+  "item.lanthanum.gemstone_axe": "Hache en pierre précieuse",
+  "item.lanthanum.gemstone_hoe": "Houe en pierre précieuse",
+
+  "item.lanthanum.lanthanum": "Lanthane",
+  "item.lanthanum.raw_lanthanum": "Minerai brut de lanthane",
+  "block.lanthanum.lanthanum_block": "Bloc de lanthane",
+  "block.lanthanum.lanthanum_ore": "Minerai de lanthane",
+  "block.lanthanum.deep_slate_lanthanum_ore": "Minerai de lanthane des ardoises profondes",
+  "item.lanthanum.lanthanum_sword": "Épée en lanthane",
+  "item.lanthanum.lanthanum_shovel": "Pelle en lanthane",
+  "item.lanthanum.lanthanum_pickaxe": "Pioche en lanthane",
+  "item.lanthanum.lanthanum_axe": "Hache en lanthane",
+  "item.lanthanum.lanthanum_hoe": "Houe en lanthane"
 }

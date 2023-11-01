@@ -1,14 +1,26 @@
 {
+  "itemGroup.lanthanum.lanthanumBase": "lanthanum Base",
+  "item.lanthanum.stack_rotten_flesh": "Stack Rotten Flesh",
+
   "item.lanthanum.gemstone": "GemStone",
   "item.lanthanum.raw_gemstone": "Raw GemStone",
   "block.lanthanum.gemstone_block": "GemStone Block",
   "block.lanthanum.gemstone_ore": "GemStone Ore",
   "block.lanthanum.deep_slate_gemstone_ore": "DeepSlate GemStone Ore",
-  "item.lanthanum.stack_rotten_flesh": "Stack Rotten Flesh",
-  "itemGroup.lanthanum.gemstone": "lanthanum's stone",
   "item.lanthanum.gemstone_sword": "GemStone Sword",
   "item.lanthanum.gemstone_shovel": "GemStone Shovel",
   "item.lanthanum.gemstone_pickaxe": "GemStone Pickaxe",
   "item.lanthanum.gemstone_axe": "GemStone Axe",
-  "item.lanthanum.gemstone_hoe": "GemStone Hoe"
+  "item.lanthanum.gemstone_hoe": "GemStone Hoe",
+
+  "item.lanthanum.lanthanum": "Lanthanum",
+  "item.lanthanum.raw_lanthanum": "Raw Lanthanum",
+  "block.lanthanum.lanthanum_block": "Lanthanum Block",
+  "block.lanthanum.lanthanum_ore": "Lanthanum Ore",
+  "block.lanthanum.deep_slate_lanthanum_ore": "DeepSlate Lanthanum Ore",
+  "item.lanthanum.lanthanum_sword": "Lanthanum Sword",
+  "item.lanthanum.lanthanum_shovel": "Lanthanum Shovel",
+  "item.lanthanum.lanthanum_pickaxe": "Lanthanum Pickaxe",
+  "item.lanthanum.lanthanum_axe": "Lanthanum Axe",
+  "item.lanthanum.lanthanum_hoe": "Lanthanum Hoe"
 }
