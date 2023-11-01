@@ -1,0 +1,14 @@
+{
+  "item.lanthanum.gemstone": "寶石",
+  "item.lanthanum.raw_gemstone": "寶石原礦",
+  "block.lanthanum.gemstone_block": "寶石塊",
+  "block.lanthanum.gemstone_ore": "寶石礦石",
+  "block.lanthanum.deep_slate_gemstone_ore": "深層寶石礦石",
+  "item.lanthanum.stack_rotten_flesh": "腐爛肉堆",
+  "itemGroup.lanthanum.gemstone": "‘鑭’ 的寶石",
+  "item.lanthanum.gemstone_sword": "‘鑭’ 的寶石 劍",
+  "item.lanthanum.gemstone_shovel": "‘鑭’ 的寶石 鏟",
+  "item.lanthanum.gemstone_pickaxe": "‘鑭’ 的寶石 鎬",
+  "item.lanthanum.gemstone_axe": "‘鑭’ 的寶石 斧",
+  "item.lanthanum.gemstone_hoe": "‘鑭’ 的寶石 鋤"
+}
