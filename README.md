@@ -41,6 +41,12 @@ If you have any suggestions, feedback, or contributions to offer, please feel fr
 
 - **Weapon Family Update**: The update also includes enhancements to the Gemstone weapon family, providing players with more choices and variety.
 
+- **Update the dimension**: Updates were made to the dimension, and features of the new dimension were fixed. Now the dimension is full of lanthanum_block.
+
+- **Add Lanthanum Portal**: A Lanthanum Portal was added to the mod. Now you can use lanthanum_block and water to create a Portal like the Nether Portal.
+
+- **Add lanthanum tools and family**: Lanthanum ore and tools were added, and ore generation in nature and crafting was implemented.
+
 These updates reflect Lanthanum Mod as an actively maintained and ever-evolving project designed to offer Minecraft players a more thrilling gaming experience. The developer's focus extends beyond feature improvements, emphasizing the maintenance of development standards to ensure code quality and consistency.
 
 If you have an interest in gemstones, new dimensions, and more exciting content within the Minecraft universe, Lanthanum Mod presents itself as an excellent choice. Feel free to provide feedback, suggestions, or apply to become a contributor to further enhance and contribute to this project.

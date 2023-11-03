@@ -29,17 +29,23 @@ Nuestro objetivo es proporcionarte una experiencia de juego única en Minecraft 
 
 Si tienes sugerencias, comentarios o contribuciones para ofrecer, no dudes en ponerte en contacto con nosotros.
 
-## Mod Lanthanum - Descripción del Mod
+## Lanthanum Mod - Descripción del Mod
 
-**El Mod Lanthanum** es un mod de Minecraft en constante evolución dedicado a mejoras y expansiones continuas. El desarrollador actualiza y mejora constantemente el mod para ofrecer una experiencia de juego más inmersiva y variada. Aquí tienes algunas de las actualizaciones y mejoras recientes:
+**Lanthanum Mod** es un mod en constante evolución de Minecraft dedicado a mejoras y expansiones continuas. El desarrollador actualiza y mejora constantemente el mod para ofrecer una experiencia de juego más atractiva y diversa. A continuación, se presentan algunas de las actualizaciones y mejoras recientes:
 
-- **Actualización de Dimensiones**: En una actualización reciente, el mod introdujo una nueva dimensión, la Dimensión #14, eliminando por completo los ríos y océanos, lo que agrega un nuevo desafío a la exploración en el juego. Este cambio diversifica la experiencia de juego.
+- **Actualización de Dimensiones**: En una actualización reciente, el mod introdujo una nueva dimensión, la Dimensión #14, eliminando ríos y océanos por completo, lo que añade un nuevo nivel de desafío a la exploración en el juego. Este cambio diversifica la experiencia de juego.
 
-- **Actualización de Herramientas de Gema y Creación**: El desarrollador no solo actualizó la versión del mod, sino que también perfeccionó el proceso de creación de herramientas de gema, haciéndolas más poderosas y divertidas. Esta mejora agrega una capa adicional de emoción y desafío para los jugadores.
+- **Actualización de Herramientas y Creación de Gemas**: El desarrollador no solo actualizó la versión del mod, sino que también refinó el proceso de creación de herramientas de gemas, haciéndolas más poderosas y divertidas. Esta mejora agrega una capa adicional de emoción y desafío para los jugadores.
 
-- **Actualización de Generación y Refinamiento de Gemas**: El mod también mejoró la generación y el refinamiento de gemas, con el objetivo de lograr un mejor equilibrio de juego.
+- **Actualización de Generación y Refinación de Gemas**: El mod también mejoró la generación y refinación de gemas, con el objetivo de lograr un mejor equilibrio y una jugabilidad mejorada.
 
-- **Actualización de la Familia de Armas de Gema**: La actualización también incluye mejoras en la familia de armas de gema, ofreciendo a los jugadores más opciones y variedad.
+- **Actualización de la Familia de Armas**: La actualización también incluye mejoras en la familia de armas de gemas, brindando a los jugadores más opciones y variedad.
+
+- **Actualización de la Dimensión**: Se realizaron actualizaciones en la dimensión y se corrigieron las características de la nueva dimensión. Ahora, la dimensión está llena de bloques de lantano.
+
+- **Añadir Portal de Lantano**: Se agregó un Portal de Lantano al mod. Ahora puedes usar bloques de lantano y agua para crear un portal similar al Portal del Inframundo.
+
+- **Añadir herramientas y familia de Lantano**: Se añadieron minerales y herramientas de lantano, y se implementó la generación de minerales en la naturaleza y su creación.
 
 Estas actualizaciones reflejan el Mod Lanthanum como un proyecto activamente mantenido y en constante evolución, diseñado para ofrecer a los jugadores de Minecraft una experiencia de juego más emocionante. El enfoque del desarrollador va más allá de las mejoras en las características, haciendo hincapié en el mantenimiento de estándares de desarrollo para garantizar la calidad y consistencia del código.
 

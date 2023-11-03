@@ -31,15 +31,21 @@ Si vous avez des suggestions, des commentaires ou des contributions à offrir, n
 
 ## Mod Lanthanum - Aperçu du Mod
 
-**Le Mod Lanthanum** est un mod Minecraft en constante évolution, dédié à des améliorations et extensions continues. Le développeur met constamment à jour et améliore le mod pour offrir une expérience de jeu plus immersive et variée. Voici quelques-unes des mises à jour et améliorations récentes :
+Le **Mod Lanthanum** est un mod Minecraft en constante évolution dédié aux améliorations et aux extensions continues. Le développeur met constamment à jour et améliore le mod pour offrir une expérience de jeu plus captivante et diversifiée. Voici quelques-unes des mises à jour et améliorations récentes :
 
-- **Mise à Jour des Dimensions** : Dans une mise à jour récente, le mod a introduit une nouvelle dimension, la Dimension #14, en supprimant complètement les rivières et les océans, ajoutant ainsi une nouvelle couche de défi à l'exploration dans le jeu. Ce changement diversifie l'expérience de jeu.
+- **Mise à jour de la Dimension** : Dans une mise à jour récente, le mod a introduit une nouvelle dimension, la Dimension n°14, en supprimant complètement les rivières et les océans, ajoutant ainsi une nouvelle couche de défi à l'exploration dans le jeu. Ce changement diversifie l'expérience de jeu.
 
-- **Mise à Jour des Outils en Gemmes et de l'Artisanat** : Le développeur a non seulement mis à jour la version du mod, mais a également affiné le processus de création des outils en gemmes, les rendant plus puissants et amusants. Cette amélioration ajoute une couche supplémentaire d'excitation et de défi pour les joueurs.
+- **Mise à jour des Outils et de la Fabrication de Gemmes** : Le développeur n'a pas seulement mis à jour la version du mod, mais a également peaufiné le processus de fabrication des outils en gemmes, les rendant plus puissants et plus amusants. Cette amélioration ajoute une couche supplémentaire d'excitation et de défi pour les joueurs.
 
-- **Mise à Jour de la Génération et du Raffinement des Gemmes** : Le mod a également amélioré la génération et le raffinement des gemmes, visant à atteindre un meilleur équilibre de jeu.
+- **Mise à jour de la Génération et du Raffinement des Gemmes** : Le mod a également amélioré la génération et le raffinement des gemmes, dans le but d'obtenir un meilleur équilibre du jeu et une jouabilité améliorée.
 
-- **Mise à Jour de la Famille d'Armes en Gemmes** : La mise à jour inclut également des améliorations de la famille d'armes en gemmes, offrant ainsi aux joueurs davantage de choix et de variété.
+- **Mise à jour de la Famille d'Armes** : Cette mise à jour comprend également des améliorations de la famille d'armes en gemmes, offrant aux joueurs plus de choix et de variété.
+
+- **Mise à jour de la Dimension** : Des mises à jour ont été apportées à la dimension, et les caractéristiques de la nouvelle dimension ont été corrigées. Désormais, la dimension est remplie de blocs de lanthanum.
+
+- **Ajout du Portail de Lanthanum** : Un Portail de Lanthanum a été ajouté au mod. Désormais, vous pouvez utiliser des blocs de lanthanum et de l'eau pour créer un portail similaire au Nether.
+
+- **Ajout d'outils et de la famille de Lanthanum** : Des minerais de lanthanum et des outils ont été ajoutés, et la génération des minerais dans la nature ainsi que leur fabrication ont été implémentées.
 
 Ces mises à jour reflètent le Mod Lanthanum en tant que projet activement entretenu et en constante évolution, conçu pour offrir aux joueurs de Minecraft une expérience de jeu plus passionnante. L'accent du développeur va au-delà des améliorations de fonctionnalités, mettant l'accent sur le respect des normes de développement pour assurer la qualité et la cohérence du code.
 
