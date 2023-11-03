@@ -12,6 +12,8 @@
 ## 關於 Lanthanum 模組
 
 歡迎來到 Lanthanum 模組！這個模組的靈感來自於我對中國漢字 "鍺"（Lanthanum）的喜愛。
+![Image](gallery/lanthanum_1.png)
+![Image](gallery/lanthanum_2.png)
 
 ### 為什麼創建這個模組？
 

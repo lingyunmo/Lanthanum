@@ -12,6 +12,8 @@ _# 使用 Fabric 的 Minecraft 模组
 ## 关于 Lanthanum 模组
 
 欢迎来到 Lanthanum 模组！这个模组的灵感来自于我对中国汉字 "镧" 的喜爱。
+![Image](gallery/lanthanum_1.png)
+![Image](gallery/lanthanum_2.png)
 
 ### 为什么创建这个模组？
 

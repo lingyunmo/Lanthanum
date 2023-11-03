@@ -12,6 +12,8 @@
 ## À propos du Mod Lanthanum
 
 Bienvenue dans le Mod Lanthanum ! Ce mod est inspiré de mon affection pour le caractère chinois "镧" (Lanthane).
+![Image](gallery/lanthanum_1.png)
+![Image](gallery/lanthanum_2.png)
 
 ### Pourquoi Créer ce Mod ?
 

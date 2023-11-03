@@ -12,6 +12,8 @@
 ## Lanthanum モッドについて
 
 Lanthanum モッドへようこそ！このモッドは、私が中国の文字 "镧"（ランタン）に対する愛情からインスパイアを受けています。
+![Image](gallery/lanthanum_1.png)
+![Image](gallery/lanthanum_2.png)
 
 ### なぜこのモッドを作成したのか？
 
