@@ -13,7 +13,9 @@ public class ThirstData {
         int thirst = nbt.getInt("thirst");
         thirst = Math.min(thirst + amount,10);
         nbt.putInt("thirst",thirst);
-        syncThirst(thirst,(ServerPlayerEntity) player);
++       if (player instanceof ServerPlayerEntity) {
++           syncThirst(thirst,(ServerPlayerEntity) player);
++       }
         return thirst;
     }
 
