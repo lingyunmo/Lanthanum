@@ -36,10 +36,15 @@ public class ModBlocks {
             new ExperienceDroppingBlock(FabricBlockSettings.of(Material.STONE).strength(8.0f).requiresTool(),
                     UniformIntProvider.create(4, 8)), ModItemGroup.LanthanumBase);
 
+    public static final Block LANTHANUM_PORTAL_FRAME = registerBlock("lanthanum_portal_frame",
+            new Block(FabricBlockSettings.of(Material.METAL).strength(8.0f).requiresTool()),
+            ModItemGroup.LanthanumBase);
+
     public static Block registerBlock(String name, Block block, ItemGroup... itemGroups) {
         ModItems.registerItem(name, new BlockItem(block, new FabricItemSettings()), itemGroups);
         return Registry.register(Registries.BLOCK, new Identifier(Lanthanum.MOD_ID, name), block);
     }
+
 
     public static void registerModBlocks() {
         Lanthanum.LOGGER.debug("Registering mod blocks for" + Lanthanum.MOD_ID);
