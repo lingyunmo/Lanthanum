@@ -1,16 +1,10 @@
 package cn.bzlom.lanthanum;
 
-import cn.bzlom.lanthanum.item.LanthanumFoodComponents;
+import cn.bzlom.lanthanum.event.PlayerTickHandler;
+import cn.bzlom.lanthanum.networking.ModMessage;
 import cn.bzlom.lanthanum.registry.*;
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
-import net.minecraft.item.Items;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.util.Identifier;
+import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -26,5 +20,7 @@ public class Lanthanum implements ModInitializer {
         ModBlocks.registerModBlocks();
         ModOreGen.generateOres();
         ModPortal.portalBuilder();
+        ModMessage.registerS2CPackets();
+        ServerTickEvents.START_SERVER_TICK.register(new PlayerTickHandler());
     }
 }
