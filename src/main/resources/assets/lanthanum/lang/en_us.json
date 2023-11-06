@@ -1,4 +1,9 @@
 {
+  "key.category.lanthanum.lanthanum": "Lanthanum",
+  "key.lanthanum.drink_water": "Drinking water",
+  "message.lanthanum.drink_water":"Drinking water",
+  "message.lanthanum.no_water": "No water found",
+
   "itemGroup.lanthanum.lanthanumBase": "lanthanum Base",
   "item.lanthanum.stack_rotten_flesh": "Stack Rotten Flesh",
   "block.lanthanum.lanthanum_portal_frame": "Lanthanum Portal Frame",

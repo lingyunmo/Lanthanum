@@ -20,6 +20,9 @@
   "entrypoints": {
     "main": [
       "cn.bzlom.lanthanum.Lanthanum"
+    ],
+    "client": [
+      "cn.bzlom.lanthanum.LanthanumClient"
     ]
   },
   "mixins": [

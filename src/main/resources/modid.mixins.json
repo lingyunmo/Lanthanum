@@ -4,6 +4,7 @@
   "package": "cn.bzlom.lanthanum.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "ModEntityDataSaverMixin"
   ],
   "client": [
   ],

@@ -18,7 +18,7 @@ public enum GemstoneToolMaterials implements ToolMaterial {
     private final int enchantability;
     private final Lazy<Ingredient> repairIngredient;
 
-    private GemstoneToolMaterials(int miningLevel, int itemDurability, float miningSpeed, float attackDamage, int enchantability, Supplier repairIngredient) {
+    GemstoneToolMaterials(int miningLevel, int itemDurability, float miningSpeed, float attackDamage, int enchantability, Supplier repairIngredient) {
         this.miningLevel = miningLevel;
         this.itemDurability = itemDurability;
         this.miningSpeed = miningSpeed;
@@ -48,6 +48,6 @@ public enum GemstoneToolMaterials implements ToolMaterial {
     }
 
     public Ingredient getRepairIngredient() {
-        return (Ingredient) this.repairIngredient.get();
+        return this.repairIngredient.get();
     }
 }
