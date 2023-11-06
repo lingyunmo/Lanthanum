@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "lanthanum:block/lanthanum_portal_frame"
+  }
+}

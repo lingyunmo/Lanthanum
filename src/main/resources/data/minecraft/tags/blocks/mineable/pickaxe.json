@@ -3,6 +3,7 @@
   "values": [
     "lanthanum:deep_slate_gemstone_ore",
     "lanthanum:gemstone_ore",
-    "lanthanum:gemstone_block"
+    "lanthanum:gemstone_block",
+    "lanthanum:lanthanum_portal_frame"
   ]
 }

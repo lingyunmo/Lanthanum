@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "lanthanum:lanthanum_block"
+  },
+  "result": "lanthanum:lanthanum_portal_frame",
+  "experience": 1.4,
+  "cookingtime": 1200
+}
