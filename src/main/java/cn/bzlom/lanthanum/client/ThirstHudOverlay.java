@@ -16,24 +16,23 @@ public class ThirstHudOverlay implements HudRenderCallback {
     @Override
     public void onHudRender(MatrixStack matrixStack, float tickDelta) {
         MinecraftClient client = MinecraftClient.getInstance();
-        if (client != null && client.player != null) {
+        if (client != null && client.player != null && !client.player.getAbilities().creativeMode) {
             int width = client.getWindow().getScaledWidth();
             int height = client.getWindow().getScaledHeight();
             int x = width / 2;
+            // Get thirst value
+            int thirstValue = ((IEntityDataSaver) client.player).getPersistentData().getInt("thirst");
 
             RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
-            RenderSystem.setShaderTexture(0, EMPTY_THIRST);
+            // Draw thirsty texture (empty)
             for (int i = 0; i < 10; i++) {
-                DrawableHelper.drawTexture(matrixStack, x - 94 + (i * 9), height - 54, 0, 0, 12, 12);
+                RenderSystem.setShaderTexture(0, EMPTY_THIRST);
+                DrawableHelper.drawTexture(matrixStack, x - 94 + (i * 9), height - 54, 0, 0, 12, 12, 12, 12);
             }
-
-            RenderSystem.setShaderTexture(0, FILLED_THIRST);
-            for (int i = 0; i < 10; i++) {
-                if (((IEntityDataSaver) client.player).getPersistentData().getInt("thirst") > i) {
-                    DrawableHelper.drawTexture(matrixStack, x - 94 + (i * 9), height - 54, 0, 0, 12, 12);
-                } else {
-                    break;
-                }
+            // Draw thirsty texture (full)
+            for (int i = 0; i < thirstValue; i++) {
+                RenderSystem.setShaderTexture(0, FILLED_THIRST);
+                DrawableHelper.drawTexture(matrixStack, x - 94 + (i * 9), height - 54, 0, 0, 12, 12, 12, 12);
             }
         }
     }
