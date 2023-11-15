@@ -1,0 +1,6 @@
+# CODEOWNERS for autoreview assigning in github
+
+/.github                                        @lingyunmo
+/src                                            @lingyunmo
+/src/main/java/cn/bzlom/lanthanum/registry      @DavidPisces
+/src/main/resources/assets/lanthanum/textures   @Stablaze
