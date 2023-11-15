@@ -73,18 +73,17 @@ public class PlayerTickHandler implements ServerTickEvents.StartTick {
                     && ((IEntityDataSaver) player).getPersistentData().getInt("metalResistance") == 0
                     && !isAroundMetalThem(player, world)) {
                 MetalResistanceData.addMetalResistance(((IEntityDataSaver) player), 10);
-                ClientPlayNetworking.send(ModMessage.RESTORE_METAL_RESISTANCE_ID, PacketByteBufs.create());
                 initialized = true;
+            } else if (new Random().nextFloat() <= 0.05f && MinecraftClient.getInstance().player != null) {
+                ClientPlayNetworking.send(ModMessage.RESTORE_METAL_RESISTANCE_ID, PacketByteBufs.create());
             } else if (MinecraftClient.getInstance().player != null && initialized) {
                 if (new Random().nextFloat() <= 0.0005f && !isAroundMetalThem(player, world)) {
                     IEntityDataSaver dataPlayer = ((IEntityDataSaver) player);
                     MetalResistanceData.addMetalResistance(dataPlayer, 1);
-                    ClientPlayNetworking.send(ModMessage.RESTORE_METAL_RESISTANCE_ID, PacketByteBufs.create());
                 }
                 if (new Random().nextFloat() <= 0.00005f && isAroundMetalThem(player, world)) {
                     IEntityDataSaver dataPlayer = ((IEntityDataSaver) player);
                     MetalResistanceData.removeMetalResistance(dataPlayer, 1);
-                    ClientPlayNetworking.send(ModMessage.RESTORE_METAL_RESISTANCE_ID, PacketByteBufs.create());
                 }
             }
         }
