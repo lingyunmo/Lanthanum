@@ -6,9 +6,11 @@ import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.ClientPlayNetworkHandler;
 import net.minecraft.network.PacketByteBuf;
 
-public class ThirstSyncDataS2CPacket {
+public class MetalResistanceSyncDataS2CPacket {
     public static void receive(MinecraftClient client, ClientPlayNetworkHandler handler,
-                               PacketByteBuf buf, PacketSender sender){
-        ((IEntityDataSaver) client.player).getPersistentData().putInt("thirst",buf.readInt());
+                               PacketByteBuf buf, PacketSender sender) {
+        if (client.player != null) {
+            ((IEntityDataSaver) client.player).getPersistentData().putInt("metalResistance", buf.readInt());
+        }
     }
 }

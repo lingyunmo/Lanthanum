@@ -2,7 +2,6 @@
   "itemGroup.lanthanum.lanthanumBase": "Lantano Base",
   "item.lanthanum.stack_rotten_flesh": "Pila de carne podrida",
   "block.lanthanum.lanthanum_portal_frame": "Marco de Portal de Lantano",
-
   "item.lanthanum.gemstone": "Gema",
   "item.lanthanum.raw_gemstone": "Gema Cruda",
   "block.lanthanum.gemstone_block": "Bloque de Gema",
@@ -13,7 +12,6 @@
   "item.lanthanum.gemstone_pickaxe": "Pico de Gema",
   "item.lanthanum.gemstone_axe": "Hacha de Gema",
   "item.lanthanum.gemstone_hoe": "Azada de Gema",
-
   "item.lanthanum.lanthanum": "Lantano",
   "item.lanthanum.raw_lanthanum": "Lantano Crudo",
   "block.lanthanum.lanthanum_block": "Bloque de Lantano",

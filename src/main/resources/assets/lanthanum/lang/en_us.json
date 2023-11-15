@@ -1,13 +1,9 @@
 {
   "key.category.lanthanum.lanthanum": "Lanthanum",
-  "key.lanthanum.drink_water": "Drinking water",
-  "message.lanthanum.drink_water":"Drinking water",
-  "message.lanthanum.no_water": "No water found",
-
+  "key.lanthanum.restore_metal_resistance": "Restore Metal Resistance",
   "itemGroup.lanthanum.lanthanumBase": "lanthanum Base",
   "item.lanthanum.stack_rotten_flesh": "Stack Rotten Flesh",
   "block.lanthanum.lanthanum_portal_frame": "Lanthanum Portal Frame",
-
   "item.lanthanum.gemstone": "GemStone",
   "item.lanthanum.raw_gemstone": "Raw GemStone",
   "block.lanthanum.gemstone_block": "GemStone Block",
@@ -18,7 +14,6 @@
   "item.lanthanum.gemstone_pickaxe": "GemStone Pickaxe",
   "item.lanthanum.gemstone_axe": "GemStone Axe",
   "item.lanthanum.gemstone_hoe": "GemStone Hoe",
-
   "item.lanthanum.lanthanum": "Lanthanum",
   "item.lanthanum.raw_lanthanum": "Raw Lanthanum",
   "block.lanthanum.lanthanum_block": "Lanthanum Block",

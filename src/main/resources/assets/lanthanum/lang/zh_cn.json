@@ -1,13 +1,11 @@
 {
   "key.category.lanthanum.lanthanum": "镧",
   "key.lanthanum.drink_water": "饮水",
-  "message.lanthanum.drink_water":"喝水",
+  "message.lanthanum.drink_water": "喝水",
   "message.lanthanum.no_water": "周围没有水源",
-
   "itemGroup.lanthanum.lanthanumBase": "镧 基本",
   "item.lanthanum.stack_rotten_flesh": "堆起来的腐烂的肉",
   "block.lanthanum.lanthanum_portal_frame": "镧 传送门框架",
-
   "item.lanthanum.gemstone": "宝石",
   "item.lanthanum.raw_gemstone": "宝石原矿",
   "block.lanthanum.gemstone_block": "宝石块",
@@ -18,7 +16,6 @@
   "item.lanthanum.gemstone_pickaxe": "宝石 镐",
   "item.lanthanum.gemstone_axe": "宝石 斧",
   "item.lanthanum.gemstone_hoe": "宝石 锄",
-
   "item.lanthanum.lanthanum": "镧矿",
   "item.lanthanum.raw_lanthanum": "镧原矿",
   "block.lanthanum.lanthanum_block": "镧块",
