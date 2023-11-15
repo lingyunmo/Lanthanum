@@ -22,22 +22,22 @@ public class MetalResistanceHudOverlay implements HudRenderCallback {
             int width = client.getWindow().getScaledWidth();
             int height = client.getWindow().getScaledHeight();
             int x = width / 2;
-            // Get metalResistance value
+            // Get metalResistance
             int metalResistance = ((IEntityDataSaver) client.player).getPersistentData().getInt("metalResistance");
 
             RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
-            // Draw metalResistance texture (empty)
-            for (int i = 0; i < 10; i++) {
-                RenderSystem.setShaderTexture(0, EMPTY_METAL_RESISTANCE);
-                DrawableHelper.drawTexture(matrixStack, x - 94 + (i * 9), height - 54,
-                        0, 0, 12, 12, 12, 12);
-            }
-            // Draw metalResistance texture (full)
-            for (int i = 0; i < metalResistance; i++) {
-                RenderSystem.setShaderTexture(0, FILLED_METAL_RESISTANCE);
-                DrawableHelper.drawTexture(matrixStack, x - 94 + (i * 9), height - 54,
-                        0, 0, 12, 12, 12, 12);
-            }
+
+            // Draw metalResistance texture
+            drawTexture(matrixStack, x, height, EMPTY_METAL_RESISTANCE, 10);
+            drawTexture(matrixStack, x, height, FILLED_METAL_RESISTANCE, metalResistance);
+        }
+    }
+
+    private void drawTexture(MatrixStack matrixStack, int x, int height, Identifier texture, int count) {
+        RenderSystem.setShaderTexture(0, texture);
+        for (int i = 0; i < count; i++) {
+            DrawableHelper.drawTexture(matrixStack, x - 94 + (i * 9), height - 54,
+                    0, 0, 12, 12, 12, 12);
         }
     }
 }

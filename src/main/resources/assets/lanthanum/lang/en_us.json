@@ -1,8 +1,6 @@
 {
   "key.category.lanthanum.lanthanum": "Lanthanum",
   "key.lanthanum.restore_metal_resistance": "Restore Metal Resistance",
-  "message.lanthanum.restore_metal_resistance":"Restore Metal Resistance",
-  "message.lanthanum.low_level_metal_resistance": "Low Level Metal Resistance",
 
   "itemGroup.lanthanum.lanthanumBase": "lanthanum Base",
   "item.lanthanum.stack_rotten_flesh": "Stack Rotten Flesh",

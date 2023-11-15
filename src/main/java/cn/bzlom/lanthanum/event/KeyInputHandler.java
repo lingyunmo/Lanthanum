@@ -19,7 +19,7 @@ public class KeyInputHandler {
     public static void registerKeyInputs() {
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             if (restoreMetalResistanceKey.wasPressed()) {
-                ClientPlayNetworking.send(ModMessage.DRINKING_ID, PacketByteBufs.create());
+                ClientPlayNetworking.send(ModMessage.RESTORE_METAL_RESISTANCE_ID, PacketByteBufs.create());
             }
         });
     }

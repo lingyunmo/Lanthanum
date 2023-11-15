@@ -8,13 +8,13 @@ import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.util.Identifier;
 
 public class ModMessage {
-    public static final Identifier DRINKING_ID = new Identifier(Lanthanum.MOD_ID,"drinking");
-    public static final Identifier THIRST_SYNC_ID = new Identifier(Lanthanum.MOD_ID,"thirst_sync");
+    public static final Identifier RESTORE_METAL_RESISTANCE_ID = new Identifier(Lanthanum.MOD_ID,"restore_metal_resistance");
+    public static final Identifier METAL_RESISTANCE_SYNC_ID = new Identifier(Lanthanum.MOD_ID,"metal_resistance_sync");
     public static void registerC2SPackets(){
-        ServerPlayNetworking.registerGlobalReceiver(DRINKING_ID, MetalResistanceC2SPacket::receive);
+        ServerPlayNetworking.registerGlobalReceiver(RESTORE_METAL_RESISTANCE_ID, MetalResistanceC2SPacket::receive);
     }
 
     public static void registerS2CPackets(){
-        ClientPlayNetworking.registerGlobalReceiver(THIRST_SYNC_ID, MetalResistanceSyncDataS2CPacket::receive);
+        ClientPlayNetworking.registerGlobalReceiver(METAL_RESISTANCE_SYNC_ID, MetalResistanceSyncDataS2CPacket::receive);
     }
 }
