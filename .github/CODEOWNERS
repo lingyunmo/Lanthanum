@@ -1,4 +1,3 @@
 # CODEOWNERS for autoreview assigning in github
 
-/.github                                        @lingyunmo
-/src                                            @lingyunmo
+*                                               @lingyunmo
