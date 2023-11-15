@@ -7,25 +7,25 @@ import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.server.network.ServerPlayerEntity;
 
-public class ThirstData {
-    public static int addThirst(IEntityDataSaver player, int amount) {
+public class MetalResistanceData {
+    public static int addMetalResistance(IEntityDataSaver player, int amount) {
         NbtCompound nbt = player.getPersistentData();
-        int thirst = nbt.getInt("thirst");
-        thirst = Math.min(thirst + amount, 10);
-        nbt.putInt("thirst", thirst);
+        int metalResistance = nbt.getInt("metalResistance");
+        metalResistance = Math.min(metalResistance + amount, 10);
+        nbt.putInt("metalResistance", metalResistance);
         if (player instanceof ServerPlayerEntity) {
-            syncThirst(thirst, (ServerPlayerEntity) player);
+            syncThirst(metalResistance, (ServerPlayerEntity) player);
         }
-        return thirst;
+        return metalResistance;
     }
 
-    public static int removeThirst(IEntityDataSaver player, int amount) {
+    public static int removeMetalResistance(IEntityDataSaver player, int amount) {
         NbtCompound nbt = player.getPersistentData();
-        int thirst = nbt.getInt("thirst");
-        thirst = Math.max(0, thirst - amount);
-        nbt.putInt("thirst", thirst);
-        syncThirst(thirst, (ServerPlayerEntity) player);
-        return thirst;
+        int metalResistance = nbt.getInt("metalResistance");
+        metalResistance = Math.max(0, metalResistance - amount);
+        nbt.putInt("metalResistance", metalResistance);
+        syncThirst(metalResistance, (ServerPlayerEntity) player);
+        return metalResistance;
     }
 
     public static void syncThirst(int thirst, ServerPlayerEntity player) {

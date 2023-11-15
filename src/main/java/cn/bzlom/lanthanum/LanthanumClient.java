@@ -1,6 +1,6 @@
 package cn.bzlom.lanthanum;
 
-import cn.bzlom.lanthanum.client.ThirstHudOverlay;
+import cn.bzlom.lanthanum.client.MetalResistanceHudOverlay;
 import cn.bzlom.lanthanum.event.KeyInputHandler;
 import cn.bzlom.lanthanum.networking.ModMessage;
 import net.fabricmc.api.ClientModInitializer;
@@ -11,6 +11,6 @@ public class LanthanumClient implements ClientModInitializer {
     public void onInitializeClient() {
         KeyInputHandler.register();
         ModMessage.registerC2SPackets();
-        HudRenderCallback.EVENT.register(new ThirstHudOverlay());
+        HudRenderCallback.EVENT.register(new MetalResistanceHudOverlay());
     }
 }
