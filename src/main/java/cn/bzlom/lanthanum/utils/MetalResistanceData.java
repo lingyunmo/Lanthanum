@@ -28,9 +28,9 @@ public class MetalResistanceData {
         return metalResistance;
     }
 
-    public static void syncThirst(int thirst, ServerPlayerEntity player) {
+    public static void syncThirst(int metalResistance, ServerPlayerEntity player) {
         PacketByteBuf buf = PacketByteBufs.create();
-        buf.writeInt(thirst);
+        buf.writeInt(metalResistance);
         ServerPlayNetworking.send(player, ModMessage.THIRST_SYNC_ID, buf);
     }
 }

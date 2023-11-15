@@ -23,8 +23,9 @@ public class MetalResistanceC2SPacket {
 
     public static void receive(MinecraftServer server, ServerPlayerEntity player, ServerPlayNetworkHandler handler,
                                PacketByteBuf buf, PacketSender sender) {
+
         ServerWorld world = player.getWorld();
-        if (isNotAroundMetalThem(player, world)) {
+        if (isAroundMetalThem(player, world)) {
 
             player.sendMessage(Text.translatable(MESSAGE_RESTORE_METAL_RESISTANCE).
                     fillStyle(Style.EMPTY.withColor(Formatting.AQUA)), false);
@@ -41,6 +42,8 @@ public class MetalResistanceC2SPacket {
             player.sendMessage(Text.translatable(MESSAGE_LOW_LEVEL_METAL_RESISTANCE).
                     fillStyle(Style.EMPTY.withColor(Formatting.RED)), false);
 
+            MetalResistanceData.removeMetalResistance((IEntityDataSaver) player, 1);
+
             player.sendMessage(Text.literal("MetalResistance:" + ((IEntityDataSaver) player).
                             getPersistentData().getInt("metalResistance")).
                     fillStyle(Style.EMPTY.withColor(Formatting.AQUA)), true);
@@ -50,7 +53,7 @@ public class MetalResistanceC2SPacket {
         }
     }
 
-    private static boolean isNotAroundMetalThem(ServerPlayerEntity player, ServerWorld world) {
+    private static boolean isAroundMetalThem(ServerPlayerEntity player, ServerWorld world) {
         boolean isAroundMetalBlock = BlockPos.stream(player.getBoundingBox().expand(5)).map(world::getBlockState).
                 anyMatch(state -> state.getMaterial().equals(Material.METAL));
 
@@ -66,6 +69,6 @@ public class MetalResistanceC2SPacket {
                         itemStack.isOf(Items.GOLDEN_AXE) ||
                         itemStack.isOf(Items.IRON_SHOVEL) ||
                         itemStack.isOf(Items.GOLDEN_SHOVEL));
-        return !isAroundMetalBlock && !isCarryingMetalItem;
+        return isAroundMetalBlock && isCarryingMetalItem;
     }
 }
