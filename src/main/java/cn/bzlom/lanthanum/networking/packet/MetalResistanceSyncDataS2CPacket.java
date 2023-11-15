@@ -8,9 +8,9 @@ import net.minecraft.network.PacketByteBuf;
 
 public class MetalResistanceSyncDataS2CPacket {
     public static void receive(MinecraftClient client, ClientPlayNetworkHandler handler,
-                               PacketByteBuf buf, PacketSender sender){
+                               PacketByteBuf buf, PacketSender sender) {
         if (client.player != null) {
-            ((IEntityDataSaver) client.player).getPersistentData().putInt("metalResistance",buf.readInt());
+            ((IEntityDataSaver) client.player).getPersistentData().putInt("metalResistance", buf.readInt());
         }
     }
 }

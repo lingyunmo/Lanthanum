@@ -1,10 +1,14 @@
 package cn.bzlom.lanthanum.event;
 
+import cn.bzlom.lanthanum.networking.ModMessage;
 import cn.bzlom.lanthanum.registry.ModItems;
 import cn.bzlom.lanthanum.utils.IEntityDataSaver;
 import cn.bzlom.lanthanum.utils.MetalResistanceData;
+import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
+import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
 import net.minecraft.block.Material;
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.server.MinecraftServer;
@@ -18,6 +22,8 @@ import java.util.List;
 import java.util.Random;
 
 public class PlayerTickHandler implements ServerTickEvents.StartTick {
+    private static boolean initialized = false;
+
     private static boolean isAroundMetalThem(ServerPlayerEntity player, ServerWorld world) {
         boolean isAroundMetalBlock = BlockPos.stream(player.getBoundingBox().expand(5)).map(world::getBlockState).
                 anyMatch(state -> state.getMaterial().equals(Material.METAL));
@@ -61,13 +67,25 @@ public class PlayerTickHandler implements ServerTickEvents.StartTick {
     public void onStartTick(MinecraftServer server) {
         for (ServerPlayerEntity player : server.getPlayerManager().getPlayerList()) {
             ServerWorld world = player.getWorld();
-            if (new Random().nextFloat() <= 0.0005f && !isAroundMetalThem(player, world)) {
-                IEntityDataSaver dataPlayer = ((IEntityDataSaver) player);
-                MetalResistanceData.addMetalResistance(dataPlayer, 1);
-            }
-            if (new Random().nextFloat() <= 0.0001f && isAroundMetalThem(player, world)) {
-                IEntityDataSaver dataPlayer = ((IEntityDataSaver) player);
-                MetalResistanceData.removeMetalResistance(dataPlayer, 1);
+            if (new Random().nextFloat() <= 0.05f
+                    && MinecraftClient.getInstance().player != null
+                    && !initialized
+                    && ((IEntityDataSaver) player).getPersistentData().getInt("metalResistance") == 0
+                    && !isAroundMetalThem(player, world)) {
+                MetalResistanceData.addMetalResistance(((IEntityDataSaver) player), 10);
+                ClientPlayNetworking.send(ModMessage.RESTORE_METAL_RESISTANCE_ID, PacketByteBufs.create());
+                initialized = true;
+            } else if (MinecraftClient.getInstance().player != null && initialized) {
+                if (new Random().nextFloat() <= 0.0005f && !isAroundMetalThem(player, world)) {
+                    IEntityDataSaver dataPlayer = ((IEntityDataSaver) player);
+                    MetalResistanceData.addMetalResistance(dataPlayer, 1);
+                    ClientPlayNetworking.send(ModMessage.RESTORE_METAL_RESISTANCE_ID, PacketByteBufs.create());
+                }
+                if (new Random().nextFloat() <= 0.00005f && isAroundMetalThem(player, world)) {
+                    IEntityDataSaver dataPlayer = ((IEntityDataSaver) player);
+                    MetalResistanceData.removeMetalResistance(dataPlayer, 1);
+                    ClientPlayNetworking.send(ModMessage.RESTORE_METAL_RESISTANCE_ID, PacketByteBufs.create());
+                }
             }
         }
     }

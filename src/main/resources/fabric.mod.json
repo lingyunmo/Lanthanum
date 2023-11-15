@@ -2,7 +2,6 @@
   "schemaVersion": 1,
   "id": "lanthanum",
   "version": "${version}",
-
   "name": "Lanthanum",
   "description": "This is a very small mod!",
   "authors": [
@@ -12,10 +11,8 @@
     "homepage": "https://bzlom.cn/",
     "sources": "https://github.com/lingyunmo/Lanthanum"
   },
-
   "license": "MIT",
   "icon": "assets/lanthanum/icon.png",
-
   "environment": "*",
   "entrypoints": {
     "main": [
@@ -28,7 +25,6 @@
   "mixins": [
     "modid.mixins.json"
   ],
-
   "depends": {
     "fabricloader": ">=0.14.11",
     "fabric-api": "*",

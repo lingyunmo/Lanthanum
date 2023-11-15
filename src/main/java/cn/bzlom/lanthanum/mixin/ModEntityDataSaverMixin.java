@@ -14,24 +14,25 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(Entity.class)
 public class ModEntityDataSaverMixin implements IEntityDataSaver {
     private NbtCompound persistentData;
+
     @Override
     public NbtCompound getPersistentData() {
-        if(this.persistentData == null) {
+        if (this.persistentData == null) {
             this.persistentData = new NbtCompound();
         }
         return persistentData;
     }
 
     @Inject(method = "writeNbt", at = @At("HEAD"))
-    protected void injectWriteMethod(NbtCompound nbt, CallbackInfoReturnable  info){
-        if (persistentData != null){
-            nbt.put("lanthanum.lanthanum_data",persistentData);
+    protected void injectWriteMethod(NbtCompound nbt, CallbackInfoReturnable info) {
+        if (persistentData != null) {
+            nbt.put("lanthanum.lanthanum_data", persistentData);
         }
     }
 
-    @Inject(method = "readNbt",at=@At("HEAD"))
-    protected void injectReadMethod(NbtCompound nbt, CallbackInfo info){
-        if(nbt.contains("lanthanum.lanthanum_data",10)){
+    @Inject(method = "readNbt", at = @At("HEAD"))
+    protected void injectReadMethod(NbtCompound nbt, CallbackInfo info) {
+        if (nbt.contains("lanthanum.lanthanum_data", 10)) {
             persistentData = nbt.getCompound("lanthanum.lanthanum_data");
         }
     }

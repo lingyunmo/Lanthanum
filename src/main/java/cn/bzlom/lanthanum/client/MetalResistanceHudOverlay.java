@@ -11,9 +11,9 @@ import net.minecraft.util.Identifier;
 
 public class MetalResistanceHudOverlay implements HudRenderCallback {
     private static final Identifier FILLED_METAL_RESISTANCE = new Identifier(Lanthanum.MOD_ID,
-            "textures/thirst/filled_thirst.png");
+            "textures/metal/filled_metal_resistance.png");
     private static final Identifier EMPTY_METAL_RESISTANCE = new Identifier(Lanthanum.MOD_ID,
-            "textures/thirst/empty_thirst.png");
+            "textures/metal/empty_metal_resistance.png");
 
     @Override
     public void onHudRender(MatrixStack matrixStack, float tickDelta) {
@@ -37,7 +37,7 @@ public class MetalResistanceHudOverlay implements HudRenderCallback {
         RenderSystem.setShaderTexture(0, texture);
         for (int i = 0; i < count; i++) {
             DrawableHelper.drawTexture(matrixStack, x - 94 + (i * 9), height - 54,
-                    0, 0, 12, 12, 12, 12);
+                    0, 0, 10, 10, 10, 10);
         }
     }
 }

@@ -1,7 +1,6 @@
 package cn.bzlom.lanthanum.item;
 
 import cn.bzlom.lanthanum.Lanthanum;
-import cn.bzlom.lanthanum.item.ModOreConfiguredFeatures;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
