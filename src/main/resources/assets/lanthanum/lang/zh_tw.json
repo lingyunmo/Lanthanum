@@ -1,6 +1,8 @@
 {
+  "key.lanthanum.restore_metal_resistance": "恢復金屬耐受度",
   "itemGroup.lanthanum.lanthanumBase": "鑭 基礎",
   "item.lanthanum.stack_rotten_flesh": "堆疊爛肉",
+  "item.lanthanum.apple_silver": "銀蘋果",
   "block.lanthanum.lanthanum_portal_frame": "鑭 傳送門框架",
   "item.lanthanum.gemstone": "寶石",
   "item.lanthanum.raw_gemstone": "寶石原礦",

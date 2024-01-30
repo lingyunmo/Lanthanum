@@ -1,8 +1,8 @@
 {
-  "key.category.lanthanum.lanthanum": "Lanthanum",
   "key.lanthanum.restore_metal_resistance": "Restore Metal Resistance",
   "itemGroup.lanthanum.lanthanumBase": "lanthanum Base",
   "item.lanthanum.stack_rotten_flesh": "Stack Rotten Flesh",
+  "item.lanthanum.apple_silver": "Silver Apple",
   "block.lanthanum.lanthanum_portal_frame": "Lanthanum Portal Frame",
   "item.lanthanum.gemstone": "GemStone",
   "item.lanthanum.raw_gemstone": "Raw GemStone",

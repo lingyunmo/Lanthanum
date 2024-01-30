@@ -36,7 +36,7 @@ public class MetalResistanceHudOverlay implements HudRenderCallback {
     private void drawTexture(MatrixStack matrixStack, int x, int height, Identifier texture, int count) {
         RenderSystem.setShaderTexture(0, texture);
         for (int i = 0; i < count; i++) {
-            DrawableHelper.drawTexture(matrixStack, x - 94 + (i * 9), height - 54,
+            DrawableHelper.drawTexture(matrixStack, x - 94 + (i * 9), height - 58,
                     0, 0, 10, 10, 10, 10);
         }
     }

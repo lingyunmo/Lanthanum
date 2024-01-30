@@ -1,10 +1,8 @@
 {
-  "key.category.lanthanum.lanthanum": "镧",
-  "key.lanthanum.drink_water": "饮水",
-  "message.lanthanum.drink_water": "喝水",
-  "message.lanthanum.no_water": "周围没有水源",
+  "key.lanthanum.restore_metal_resistance": "恢复金属耐受度",
   "itemGroup.lanthanum.lanthanumBase": "镧 基本",
   "item.lanthanum.stack_rotten_flesh": "堆起来的腐烂的肉",
+  "item.lanthanum.apple_silver": "银苹果",
   "block.lanthanum.lanthanum_portal_frame": "镧 传送门框架",
   "item.lanthanum.gemstone": "宝石",
   "item.lanthanum.raw_gemstone": "宝石原矿",
