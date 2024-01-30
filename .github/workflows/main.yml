@@ -41,7 +41,7 @@ jobs:
         run: ./gradlew clean build
         
       - name: Publish (Github)
-        uses: Kir-Antipov/mc-publish@v3.2                                   
+        uses: Kir-Antipov/mc-publish@v3.3                                   
         with:
 
           github-tag: "v${{env.VERSION}}"
