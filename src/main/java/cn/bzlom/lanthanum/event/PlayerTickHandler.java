@@ -29,7 +29,7 @@ public class PlayerTickHandler implements ServerTickEvents.StartTick {
                 anyMatch(state -> state.getMaterial().equals(Material.METAL));
 
         List<Item> ingots = Arrays.asList(
-                Items.IRON_INGOT, Items.COPPER_INGOT, Items.GOLD_INGOT,
+                Items.RAW_IRON, Items.IRON_INGOT, Items.RAW_COPPER, Items.COPPER_INGOT, Items.GOLD_INGOT,
                 ModItems.RAW_GEMSTONE, ModItems.GEMSTONE, ModItems.RAW_LANTHANUM, ModItems.LANTHANUM
         );
 
@@ -47,6 +47,10 @@ public class PlayerTickHandler implements ServerTickEvents.StartTick {
 
         List<Item> shovels = Arrays.asList(
                 Items.IRON_SHOVEL, Items.GOLDEN_SHOVEL, ModItems.GEMSTONE_SHOVEL, ModItems.LANTHANUM_SHOVEL
+        );
+        List<Item> blocks = Arrays.asList(
+                Items.RAW_IRON_BLOCK, Items.RAW_COPPER_BLOCK, Items.RAW_GOLD_BLOCK, Items.IRON_BLOCK, Items.COPPER_BLOCK,
+                Items.GOLD_BLOCK
         );
 
         List<Item> itemsToCheck = new ArrayList<>();
@@ -67,6 +71,9 @@ public class PlayerTickHandler implements ServerTickEvents.StartTick {
     public void onStartTick(MinecraftServer server) {
         for (ServerPlayerEntity player : server.getPlayerManager().getPlayerList()) {
             ServerWorld world = player.getWorld();
+            if(player.isDead()){
+                    initialized = false;
+        }
             if (new Random().nextFloat() <= 0.05f
                     && MinecraftClient.getInstance().player != null
                     && !initialized
@@ -81,7 +88,7 @@ public class PlayerTickHandler implements ServerTickEvents.StartTick {
                     IEntityDataSaver dataPlayer = ((IEntityDataSaver) player);
                     MetalResistanceData.addMetalResistance(dataPlayer, 1);
                 }
-                if (new Random().nextFloat() <= 0.00005f && isAroundMetalThem(player, world)) {
+                if (new Random().nextFloat() <= 0.0001f && isAroundMetalThem(player, world)) {
                     IEntityDataSaver dataPlayer = ((IEntityDataSaver) player);
                     MetalResistanceData.removeMetalResistance(dataPlayer, 1);
                 }

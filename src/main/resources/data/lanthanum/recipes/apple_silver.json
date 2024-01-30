@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GGG",
+    "GSG",
+    "GGG"
+  ],
+  "key": {
+    "G": {
+      "item": "lanthanum:lanthanum"
+    },
+    "S": {
+      "item": "minecraft:apple"
+    }
+  },
+  "result": {
+    "item": "lanthanum:apple_silver"
+  }
+}

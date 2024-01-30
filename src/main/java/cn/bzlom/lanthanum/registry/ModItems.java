@@ -18,7 +18,7 @@ public class ModItems {
             new Item(new FabricItemSettings().food(LanthanumFoodComponents.STACK_ROTTEN_FLESH)),
             ModItemGroup.LanthanumBase, ItemGroups.FOOD_AND_DRINK);
     public static final Item APPLE_SILVER = registerItem("apple_silver",
-            new Item(new FabricItemSettings().rarity(Rarity.RARE).food(LanthanumFoodComponents.LANTHANUM_APPLE)),
+            new Item(new FabricItemSettings().rarity(Rarity.RARE).food(LanthanumFoodComponents.APPLE_SILVER)),
             ModItemGroup.LanthanumBase, ItemGroups.FOOD_AND_DRINK);
     //gemstone family
     public static final Item GEMSTONE = registerItem("gemstone",
