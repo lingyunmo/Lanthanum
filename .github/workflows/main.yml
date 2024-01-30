@@ -5,7 +5,7 @@ on: [ pull_request, workflow_dispatch ]
 env:
   MINECRAFT_VERSION: 1.19.4
   JAVA_VERSION: 17
-  GITHUB_TOKEN: ${{ secrets.PUBLISH_GITHUB_TOKEN }}           
+  GITHUB_TOKEN: ${{ secrets.PUBLISH_GITHUB_TOKEN }}
 
 permissions:
   contents: write
@@ -54,3 +54,9 @@ jobs:
           loaders: fabric
           game-versions: "${{env.MINECRAFT_VERSION}}"
           java: "${{env.JAVA_VERSION}}"
+
+          modrinth-id: PuvRflQn
+          modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
+
+          curseforge-id: 932542
+          curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}
