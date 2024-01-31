@@ -22,5 +22,6 @@
   "item.lanthanum.lanthanum_shovel": "Pelle en lanthane",
   "item.lanthanum.lanthanum_pickaxe": "Pioche en lanthane",
   "item.lanthanum.lanthanum_axe": "Hache en lanthane",
-  "item.lanthanum.lanthanum_hoe": "Houe en lanthane"
+  "item.lanthanum.lanthanum_hoe": "Houe en lanthane",
+  "block.lanthanum.lanthanum_refiner_block": "Machine de raffinage de lanthane"
 }

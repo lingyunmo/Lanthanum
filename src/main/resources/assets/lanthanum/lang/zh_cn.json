@@ -23,5 +23,6 @@
   "item.lanthanum.lanthanum_shovel": "镧 锹",
   "item.lanthanum.lanthanum_pickaxe": "镧 镐",
   "item.lanthanum.lanthanum_axe": "镧 斧",
-  "item.lanthanum.lanthanum_hoe": "镧 锄"
+  "item.lanthanum.lanthanum_hoe": "镧 锄",
+  "block.lanthanum.lanthanum_refiner_block": "镧精炼机"
 }

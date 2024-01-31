@@ -22,5 +22,6 @@
   "item.lanthanum.lanthanum_shovel": "ランタンのシャベル",
   "item.lanthanum.lanthanum_pickaxe": "ランタンのつるはし",
   "item.lanthanum.lanthanum_axe": "ランタンの斧",
-  "item.lanthanum.lanthanum_hoe": "ランタンのクワ"
+  "item.lanthanum.lanthanum_hoe": "ランタンのクワ",
+  "block.lanthanum.lanthanum_refiner_block": "ランタン精製機"
 }

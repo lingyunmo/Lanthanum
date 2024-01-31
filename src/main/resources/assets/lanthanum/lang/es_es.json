@@ -22,5 +22,6 @@
   "item.lanthanum.lanthanum_shovel": "Pala de Lantano",
   "item.lanthanum.lanthanum_pickaxe": "Pico de Lantano",
   "item.lanthanum.lanthanum_axe": "Hacha de Lantano",
-  "item.lanthanum.lanthanum_hoe": "Azada de Lantano"
+  "item.lanthanum.lanthanum_hoe": "Azada de Lantano",
+  "block.lanthanum.lanthanum_refiner_block": "Máquina de refinación de lantano"
 }

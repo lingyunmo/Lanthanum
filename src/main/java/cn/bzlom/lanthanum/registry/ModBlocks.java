@@ -1,11 +1,13 @@
 package cn.bzlom.lanthanum.registry;
 
 import cn.bzlom.lanthanum.Lanthanum;
+import cn.bzlom.lanthanum.block.custom.LanthanumRefinerBlock;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.ExperienceDroppingBlock;
 import net.minecraft.block.Material;
+import net.minecraft.block.enums.Instrument;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.registry.Registries;
@@ -39,6 +41,11 @@ public class ModBlocks {
     public static final Block LANTHANUM_PORTAL_FRAME = registerBlock("lanthanum_portal_frame",
             new Block(FabricBlockSettings.of(Material.METAL).strength(8.0f).requiresTool()),
             ModItemGroup.LanthanumBase);
+
+    //lanthanum facilities
+    public static final Block LANTHANUM_REFINER_BLOCK = registerBlock("lanthanum_refiner_block",
+            new LanthanumRefinerBlock(FabricBlockSettings.of(Material.METAL)
+                    .strength(4.0f).requiresTool().nonOpaque()),ModItemGroup.LanthanumBase);
 
     public static Block registerBlock(String name, Block block, ItemGroup... itemGroups) {
         ModItems.registerItem(name, new BlockItem(block, new FabricItemSettings()), itemGroups);
