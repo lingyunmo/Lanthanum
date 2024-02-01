@@ -1,6 +1,10 @@
 name: Publisher
  
-on: [ pull_request, workflow_dispatch ]
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
 
 env:
   MINECRAFT_VERSION: 1.19.4
