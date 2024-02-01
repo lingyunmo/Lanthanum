@@ -45,7 +45,7 @@ public class ModBlocks {
     //lanthanum facilities
     public static final Block LANTHANUM_REFINER_BLOCK = registerBlock("lanthanum_refiner_block",
             new LanthanumRefinerBlock(FabricBlockSettings.of(Material.METAL)
-                    .strength(4.0f).requiresTool().nonOpaque()),ModItemGroup.LanthanumBase);
+                    .strength(4.0f).requiresTool().nonOpaque()),ModItemGroup.LanthanumMachine);
 
     public static Block registerBlock(String name, Block block, ItemGroup... itemGroups) {
         ModItems.registerItem(name, new BlockItem(block, new FabricItemSettings()), itemGroups);
