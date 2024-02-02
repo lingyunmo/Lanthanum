@@ -1,26 +1,16 @@
 package cn.bzlom.lanthanum.screen;
 
 import cn.bzlom.lanthanum.Lanthanum;
-import net.fabricmc.fabric.api.transfer.v1.fluid.FluidConstants;
-//import cn.bzlom.lanthanum.Lanthanum;
-//import cn.bzlom.lanthanum.screen.renderer.EnergyInfoArea;
-//import cn.bzlom.lanthanum.screen.renderer.FluidStackRenderer;
-//import cn.bzlom.lanthanum.util.FluidStack;
-//import cn.bzlom.lanthanum.util.MouseUtil;
-//import net.minecraft.client.gui.screen.ingame.HandledScreen;
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.gui.screen.ingame.HandledScreen;
-import net.minecraft.client.item.TooltipContext;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
-import java.util.Optional;
-
 public class LanthanumRefinerScreen extends HandledScreen<LanthanumRefinerScreenHandler> {
     private static final Identifier TEXTURE =
-            new Identifier(Lanthanum.MOD_ID,"textures/gui/lanthanum_refiner_block_gui.png");
+            new Identifier(Lanthanum.MOD_ID, "textures/gui/lanthanum_refiner_block_gui.png");
     //    private EnergyInfoArea energyInfoArea;
     //    private FluidStackRenderer fluidStackRenderer;
 
@@ -32,7 +22,7 @@ public class LanthanumRefinerScreen extends HandledScreen<LanthanumRefinerScreen
     @Override
     protected void init() {
         super.init();
-        titleX = (backgroundWidth  - textRenderer.getWidth(title)) / 2;
+        titleX = (backgroundWidth - textRenderer.getWidth(title)) / 2;
 //        assignEnergyInfoArea();
 //        assignFluidStackRenderer();
     }
@@ -70,29 +60,28 @@ public class LanthanumRefinerScreen extends HandledScreen<LanthanumRefinerScreen
 //    }
 
 
-
     @Override
     protected void drawBackground(MatrixStack matrices, float delta, int mouseX, int mouseY) {
         int x = (width - backgroundWidth) / 2;
-        int y = (height - backgroundHeight) /2;
+        int y = (height - backgroundHeight) / 2;
         RenderSystem.setShaderTexture(0, TEXTURE);
-        drawTexture(matrices,x,y,0,0,backgroundWidth,backgroundHeight);
-        renderProgressArrow(matrices,x,y);
+        drawTexture(matrices, x, y, 0, 0, backgroundWidth, backgroundHeight);
+        renderProgressArrow(matrices, x, y);
 //        energyInfoArea.draw(context);
 //        // 绘制流体slot
 //        fluidStackRenderer.drawFluid(context,handler.fluidStack,x+55,y+15,16,61,
 //                FluidStack.convertDropletsToMb(FluidConstants.BUCKET)*20);
     }
 
-//    private void renderEnergyAreaTooltips(DrawContext context,int pMouseX,int pMouseY,int x,int y){
+    //    private void renderEnergyAreaTooltips(DrawContext context,int pMouseX,int pMouseY,int x,int y){
 //        if(isMouseAboveArea(pMouseX,pMouseY,x,y,156,13,8,64)){
 //            context.drawTooltip(textRenderer, energyInfoArea.getTooltips(), Optional.empty(), pMouseX - x, pMouseY - y);
 //        }
 //    }
-    private void renderProgressArrow(MatrixStack matrices, int x, int y){
-        if(handler.isCrafting()){
+    private void renderProgressArrow(MatrixStack matrices, int x, int y) {
+        if (handler.isCrafting()) {
             RenderSystem.setShaderTexture(0, TEXTURE);
-            drawTexture(matrices,x+105,y+33,176,0,8,handler.getScaledProgress());
+            drawTexture(matrices, x + 105, y + 33, 176, 0, 8, handler.getScaledProgress());
         }
     }
 
@@ -108,7 +97,7 @@ public class LanthanumRefinerScreen extends HandledScreen<LanthanumRefinerScreen
     public void render(MatrixStack matrices, int mouseX, int mouseY, float delta) {
         renderBackground(matrices);
         super.render(matrices, mouseX, mouseY, delta);
-        drawMouseoverTooltip(matrices,mouseX,mouseY);
+        drawMouseoverTooltip(matrices, mouseX, mouseY);
     }
 
 }
