@@ -7,7 +7,6 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.ExperienceDroppingBlock;
 import net.minecraft.block.Material;
-import net.minecraft.block.enums.Instrument;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.registry.Registries;
@@ -45,7 +44,7 @@ public class ModBlocks {
     //lanthanum facilities
     public static final Block LANTHANUM_REFINER_BLOCK = registerBlock("lanthanum_refiner_block",
             new LanthanumRefinerBlock(FabricBlockSettings.of(Material.METAL)
-                    .strength(4.0f).requiresTool().nonOpaque()),ModItemGroup.LanthanumMachine);
+                    .strength(4.0f).requiresTool().nonOpaque()), ModItemGroup.LanthanumMachine);
 
     public static Block registerBlock(String name, Block block, ItemGroup... itemGroups) {
         ModItems.registerItem(name, new BlockItem(block, new FabricItemSettings()), itemGroups);

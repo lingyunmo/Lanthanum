@@ -11,9 +11,9 @@ import net.minecraft.util.Identifier;
 public class ModBlockEntities {
     public static BlockEntityType<LanthanumRefinerBlockEntity> LANTHANUM_REFINER_BLOCK;
 
-    public static void registerBlockEntities(){
+    public static void registerBlockEntities() {
         LANTHANUM_REFINER_BLOCK = Registry.register(Registries.BLOCK_ENTITY_TYPE,
-                new Identifier(Lanthanum.MOD_ID,"lanthanum_refiner_block"),
+                new Identifier(Lanthanum.MOD_ID, "lanthanum_refiner_block"),
                 FabricBlockEntityTypeBuilder.create(LanthanumRefinerBlockEntity::new,
                         ModBlocks.LANTHANUM_REFINER_BLOCK).build(null));
 

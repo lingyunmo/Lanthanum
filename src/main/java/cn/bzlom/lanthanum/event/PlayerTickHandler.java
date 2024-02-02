@@ -71,9 +71,9 @@ public class PlayerTickHandler implements ServerTickEvents.StartTick {
     public void onStartTick(MinecraftServer server) {
         for (ServerPlayerEntity player : server.getPlayerManager().getPlayerList()) {
             ServerWorld world = player.getWorld();
-            if(player.isDead()){
-                    initialized = false;
-        }
+            if (player.isDead()) {
+                initialized = false;
+            }
             if (new Random().nextFloat() <= 0.05f
                     && MinecraftClient.getInstance().player != null
                     && !initialized

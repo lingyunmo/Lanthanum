@@ -2,7 +2,6 @@ package cn.bzlom.lanthanum.registry;
 
 import cn.bzlom.lanthanum.Lanthanum;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
-import net.minecraft.block.Block;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
