@@ -1,0 +1,11 @@
+{
+  "type": "lanthanum:lanthanum_refiner",
+  "ingredients": [
+    {
+      "item": "lanthanum:raw_gemstone"
+    }
+  ],
+  "output": {
+    "item": "lanthanum:gemstone"
+  }
+}

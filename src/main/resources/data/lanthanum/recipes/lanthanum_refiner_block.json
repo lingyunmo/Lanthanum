@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GTG",
+    "TST",
+    "GTG"
+  ],
+  "key": {
+    "G": {
+      "item": "minecraft:stone"
+    },
+    "T": {
+      "item": "lanthanum:raw_lanthanum"
+    },
+    "S": {
+      "item": "lanthanum:gemstone"
+    }
+  },
+  "result": {
+    "item": "lanthanum:lanthanum_refiner_block"
+  }
+}

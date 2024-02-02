@@ -1,6 +1,6 @@
 package cn.bzlom.lanthanum.block.entity;
 
-import cn.bzlom.lanthanum.registry.ModItems;
+import cn.bzlom.lanthanum.recipe.LanthanumRefinerRecipe;
 import cn.bzlom.lanthanum.screen.LanthanumRefinerScreenHandler;
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
 import net.minecraft.block.BlockState;
@@ -21,6 +21,8 @@ import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
+
+import java.util.Optional;
 
 public class LanthanumRefinerBlockEntity extends BlockEntity implements ExtendedScreenHandlerFactory, ImplementedInventory {
     private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(3, ItemStack.EMPTY);
@@ -347,15 +349,13 @@ public class LanthanumRefinerBlockEntity extends BlockEntity implements Extended
         for (int i = 0; i < entity.size(); i++) {
             inventory.setStack(i, entity.getStack(i));
         }
-        //zh_cn:无能量写法
-        boolean hasRawLanthanumInFirstSlot = entity.getStack(1).getItem() == ModItems.RAW_LANTHANUM;
-        return hasRawLanthanumInFirstSlot && canInsertAmountIntOutputSlot(inventory)
-                && canInsertItemIntoOutputSlot(inventory, ModItems.LANTHANUM);
-        //        Optional<LanthanumRefinerRecipe> match = entity.getWorld().getRecipeManager()
-        //                .getFirstMatch(LanthanumRefiner Recipe.Type.INSTANCE, inventory, entity.getWorld());
-        //
-        //        return match.isPresent() && canInsertAmountIntOutputSlot(inventory)
-        //                && canInsertItemIntoOutputSlot(inventory, match.get().getOutput(entity.world.getRegistryManager()).getItem());
+
+        Optional<LanthanumRefinerRecipe> match = entity.getWorld().getRecipeManager()
+                .getFirstMatch(LanthanumRefinerRecipe.Type.INSTANCE, inventory, entity.getWorld());
+
+        return match.isPresent() && canInsertAmountIntOutputSlot(inventory)
+                && canInsertItemIntoOutputSlot(inventory, match.get().getOutput(entity.world.getRegistryManager())
+                .getItem());
     }
 
     private static boolean canInsertItemIntoOutputSlot(SimpleInventory inventory, Item output) {
@@ -373,14 +373,13 @@ public class LanthanumRefinerBlockEntity extends BlockEntity implements Extended
         }
 
         if (hasRecipe(entity)) {
-//            Optional<LanthanumRefinerRecipe> match = entity.getWorld().getRecipeManager()
-//                    .getFirstMatch(LanthanumRefinerRecipe.Type.INSTANCE, inventory1, entity.getWorld());
+            Optional<LanthanumRefinerRecipe> match = entity.getWorld().getRecipeManager()
+                    .getFirstMatch(LanthanumRefinerRecipe.Type.INSTANCE, inventory1, entity.getWorld());
 
             entity.removeStack(1, 1);
 
-//            entity.setStack(2, new ItemStack(match.get().getOutput(entity.world.getRegistryManager()).getItem(),
-//                    entity.getStack(2).getCount() + 1));
-            entity.setStack(2, new ItemStack(ModItems.LANTHANUM, entity.getStack(2).getCount() + 2));
+            entity.setStack(2, new ItemStack(match.get().getOutput(entity.world.getRegistryManager()).getItem(),
+                    entity.getStack(2).getCount() + 2));
             entity.resetProgress();
         }
     }
