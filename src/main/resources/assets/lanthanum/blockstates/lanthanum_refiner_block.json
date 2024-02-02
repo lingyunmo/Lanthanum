@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "lanthanum:block/lanthanum_refiner_block"
+    },
+    "facing=south": {
+      "model": "lanthanum:block/lanthanum_refiner_block",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "lanthanum:block/lanthanum_refiner_block",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "lanthanum:block/lanthanum_refiner_block",
+      "y": 90
+    }
+  }
+}
