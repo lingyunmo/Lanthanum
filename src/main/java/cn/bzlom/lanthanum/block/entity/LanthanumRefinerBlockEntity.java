@@ -269,14 +269,12 @@ public class LanthanumRefinerBlockEntity extends BlockEntity implements Extended
             //zh_cn:以下为无能量写法
             entity.progress++;
             markDirty(world, pos, state);
-            System.out.println(entity.progress);
             if (entity.progress >= entity.maxProgress) {
                 craftItem(entity);
             }
         } else {
             entity.resetProgress();
             markDirty(world, pos, state);
-
 //            try (Transaction transaction = Transaction.openOuter()) {
 //                entity.energyStorage.insert(16, transaction);
 //                transaction.commit();
