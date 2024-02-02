@@ -3,7 +3,7 @@ name: Publisher
 on:
   push:
     branches:
-      - master
+      - alpha
   workflow_dispatch:
 
 env:
@@ -60,7 +60,7 @@ jobs:
 
           name: "Lanthanum-fabric-${{ env.MINECRAFT_VERSION }}-${{ env.VERSION }}"
           version: "${{ env.VERSION }}"
-          version-type: release
+          version-type: alpha
 
           loaders: fabric
           game-versions: "${{env.MINECRAFT_VERSION}}"
