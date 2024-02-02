@@ -58,7 +58,7 @@ jobs:
           github-tag: "v${{env.VERSION}}"
           github-token: "${{env.GITHUB_TOKEN}}"
 
-          name: "Lanthanum-fabric-${{ env.MINECRAFT_VERSION }}-${{ env.VERSION }}"
+          name: "Lanthanum-fabric-${{ env.MINECRAFT_VERSION }}-${{ env.VERSION }}-alpha"
           version: "${{ env.VERSION }}"
           version-type: alpha
 

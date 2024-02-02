@@ -70,6 +70,8 @@ java {
 }
 
 jar {
+	archiveFileName = "${archivesBaseName}-${project.minecraft_version}-${version}-alpha.jar"
+
 	from("LICENSE") {
 		rename { "${it}_${project.archivesBaseName}"}
 	}
