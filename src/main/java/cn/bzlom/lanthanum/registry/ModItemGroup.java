@@ -13,6 +13,11 @@ public class ModItemGroup {
             .icon(() -> new ItemStack(ModItems.GEMSTONE))
             .build();
 
+    public static ItemGroup LanthanumMachine = FabricItemGroup.builder(new Identifier(Lanthanum.MOD_ID, "lanthanum_refiner_block"))
+            .displayName(Text.translatable("itemGroup.lanthanum.lanthanumMachine"))
+            .icon(() -> new ItemStack(ModBlocks.LANTHANUM_REFINER_BLOCK))
+            .build();
+
     public static void registerModItemGroup() {
         Lanthanum.LOGGER.debug("Registering mod item group for" + Lanthanum.MOD_ID);
     }

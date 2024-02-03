@@ -1,6 +1,7 @@
 {
   "key.lanthanum.restore_metal_resistance": "恢复金属耐受度",
   "itemGroup.lanthanum.lanthanumBase": "镧 基本",
+  "itemGroup.lanthanum.lanthanumMachine": "镧 机器",
   "item.lanthanum.stack_rotten_flesh": "堆起来的腐烂的肉",
   "item.lanthanum.apple_silver": "银苹果",
   "block.lanthanum.lanthanum_portal_frame": "镧 传送门框架",

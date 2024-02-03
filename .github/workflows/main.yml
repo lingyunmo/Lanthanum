@@ -58,12 +58,10 @@ jobs:
           github-tag: "v${{env.VERSION}}"
           github-token: "${{env.GITHUB_TOKEN}}"
 
-          name: "Lanthanum-fabric ${{ env.VERSION }} for Minecraft ${{ env.MINECRAFT_VERSION }}"
+          name: "Lanthanum-fabric-${{ env.MINECRAFT_VERSION }}-${{ env.VERSION }}"
           version: "${{ env.VERSION }}"
           version-type: release
 
           loaders: fabric
           game-versions: "${{env.MINECRAFT_VERSION}}"
           java: "${{env.JAVA_VERSION}}"
-
-          
