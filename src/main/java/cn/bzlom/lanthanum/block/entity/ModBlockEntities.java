@@ -7,6 +7,7 @@ import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+import team.reborn.energy.api.EnergyStorage;
 
 public class ModBlockEntities {
     public static BlockEntityType<LanthanumRefinerBlockEntity> LANTHANUM_REFINER_BLOCK;
@@ -17,7 +18,7 @@ public class ModBlockEntities {
                 FabricBlockEntityTypeBuilder.create(LanthanumRefinerBlockEntity::new,
                         ModBlocks.LANTHANUM_REFINER_BLOCK).build(null));
 
-//        EnergyStorage.SIDED.registerForBlockEntities((blockEntity, context) -> ((GemInfusingBlockEntity)blockEntity).energyStorage,GEM_INFUSING_STATION);
+        EnergyStorage.SIDED.registerForBlockEntities((blockEntity, context) -> ((LanthanumRefinerBlockEntity) blockEntity).energyStorage, LANTHANUM_REFINER_BLOCK);
 //        FluidStorage.SIDED.registerForBlockEntities((blockEntity, context) -> ((GemInfusingBlockEntity)blockEntity).fluidStorage,GEM_INFUSING_STATION);
 //
 //        EXAMPLE_ANIMATION_BLOCK_ENTITY = Registry.register(Registries.BLOCK_ENTITY_TYPE,

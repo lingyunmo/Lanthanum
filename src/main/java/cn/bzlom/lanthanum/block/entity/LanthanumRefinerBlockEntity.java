@@ -1,9 +1,14 @@
 package cn.bzlom.lanthanum.block.entity;
 
 import cn.bzlom.lanthanum.block.custom.LanthanumRefinerBlock;
+import cn.bzlom.lanthanum.networking.ModMessage;
 import cn.bzlom.lanthanum.recipe.LanthanumRefinerRecipe;
 import cn.bzlom.lanthanum.screen.LanthanumRefinerScreenHandler;
+import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
+import net.fabricmc.fabric.api.networking.v1.PlayerLookup;
+import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
+import net.fabricmc.fabric.api.transfer.v1.transaction.Transaction;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -12,24 +17,27 @@ import net.minecraft.inventory.Inventories;
 import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.text.Text;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
+import team.reborn.energy.api.base.SimpleEnergyStorage;
 
 import java.util.Optional;
 
 public class LanthanumRefinerBlockEntity extends BlockEntity implements ExtendedScreenHandlerFactory, ImplementedInventory {
     private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(3, ItemStack.EMPTY);
 
-//    public ItemStack getRendererStack(){
+    //    public ItemStack getRendererStack(){
 //        if(this.getStack(2).isEmpty()){
 //            return this.getStack(1);
 //        }else{
@@ -59,23 +67,26 @@ public class LanthanumRefinerBlockEntity extends BlockEntity implements Extended
 //        super.markDirty();
 //    }
 //
-//    public final SimpleEnergyStorage energyStorage = new SimpleEnergyStorage(30000,32,32){
-//        @Override
-//        protected void onFinalCommit() {
-//            markDirty();
-//            sendEnergyPacket();
-//        }
-//    };
-//    // 能量发包
-//    private void sendEnergyPacket(){
-//        PacketByteBuf data = PacketByteBufs.create();
-//        data.writeLong(energyStorage.amount);
-//        data.writeBlockPos(getPos());
-//
-//        for(ServerPlayerEntity player:PlayerLookup.tracking((ServerWorld) world,getPos())){
-//            ServerPlayNetworking.send(player,ModMessage.ENERGY_SYNC,data);
-//        }
-//    }
+    public final SimpleEnergyStorage energyStorage = new SimpleEnergyStorage(30000, 32, 32) {
+        @Override
+        protected void onFinalCommit() {
+            markDirty();
+            if (!world.isClient) {
+                sendEnergyPacket();
+            }
+        }
+    };
+
+    //zh_cn:能量发包
+    private void sendEnergyPacket() {
+        PacketByteBuf data = PacketByteBufs.create();
+        data.writeLong(energyStorage.amount);
+        data.writeBlockPos(getPos());
+
+        for (ServerPlayerEntity player : PlayerLookup.tracking((ServerWorld) world, getPos())) {
+            ServerPlayNetworking.send(player, ModMessage.ENERGY_SYNC, data);
+        }
+    }
 //    // 流体存储的tank
 //    public final SingleVariantStorage<FluidVariant> fluidStorage = new SingleVariantStorage<FluidVariant>() {
 //        // 流体的类型
@@ -148,10 +159,11 @@ public class LanthanumRefinerBlockEntity extends BlockEntity implements Extended
         };
     }
 
-    //    public void setEnergyStorage(long energyLevel){
-//        this.energyStorage.amount = energyLevel;
-//    }
-//    // 设置流体
+    public void setEnergyStorage(long energyLevel) {
+        this.energyStorage.amount = energyLevel;
+    }
+
+    //    // 设置流体
 //    public void setFluidLevel(FluidVariant fluidVariant,long fluidLevel){
 //        this.fluidStorage.variant = fluidVariant;
 //        this.fluidStorage.amount = fluidLevel;
@@ -173,7 +185,7 @@ public class LanthanumRefinerBlockEntity extends BlockEntity implements Extended
     }
 
     @Nullable
-    // 打开menu时候和client 数据同步
+    //zh_cn:打开menu时候和client 数据同步
     @Override
     public ScreenHandler createMenu(int syncId, PlayerInventory playerInventory, PlayerEntity player) {
 //        sendEnergyPacket();
@@ -186,7 +198,7 @@ public class LanthanumRefinerBlockEntity extends BlockEntity implements Extended
         Inventories.readNbt(nbt, inventory);
         super.readNbt(nbt);
         progress = nbt.getInt("lanthanum_refiner_block.progress");
-//        energyStorage.amount = nbt.getLong("gem_infusing_station.energy");
+        energyStorage.amount = nbt.getLong("lanthanum_refiner_block.energy");
 //        fluidStorage.variant = FluidVariant.fromNbt((NbtCompound) nbt.get("gem_infusing_station.variant"));
 //        fluidStorage.amount = nbt.getLong("gem_infusing_station.fluid");
     }
@@ -196,7 +208,7 @@ public class LanthanumRefinerBlockEntity extends BlockEntity implements Extended
         super.writeNbt(nbt);
         Inventories.writeNbt(nbt, inventory);
         nbt.putInt("lanthanum_refiner_block.progress", progress);
-//        nbt.putLong("gem_infusing_station.energy", energyStorage.amount);
+        nbt.putLong("lanthanum_refiner_block.energy", energyStorage.amount);
 //        nbt.put("gem_infusing_station.variant", fluidStorage.variant.toNbt());
 //        nbt.putLong("gem_infusing_station.fluid", fluidStorage.amount);
     }
@@ -265,9 +277,16 @@ public class LanthanumRefinerBlockEntity extends BlockEntity implements Extended
             return;
         }
 
-        if (hasRecipe(entity)) {
-            //zh_cn:以下为无能量写法
+        if (hasEnergyItem(entity)) {
+            try (Transaction transaction = Transaction.openOuter()) {
+                entity.energyStorage.insert(16, transaction);
+                transaction.commit();
+            }
+        }
+
+        if (hasRecipe(entity) && hasEnoughEnergy(entity)) {
             entity.progress++;
+            extractEnergy(entity);
             markDirty(world, pos, state);
             if (entity.progress >= entity.maxProgress) {
                 craftItem(entity);
@@ -275,10 +294,6 @@ public class LanthanumRefinerBlockEntity extends BlockEntity implements Extended
         } else {
             entity.resetProgress();
             markDirty(world, pos, state);
-//            try (Transaction transaction = Transaction.openOuter()) {
-//                entity.energyStorage.insert(16, transaction);
-//                transaction.commit();
-//            }
         }
 //
 //        if (hasRecipe(entity) && hasEnoughEnergy(entity) && hasEnoughFluid(entity)) {
@@ -316,7 +331,7 @@ public class LanthanumRefinerBlockEntity extends BlockEntity implements Extended
 //        }
 //    }
 
-//    private static boolean hasFluidSourceInSlot(LanthanumRefinerBlockEntity entity) {
+    //    private static boolean hasFluidSourceInSlot(LanthanumRefinerBlockEntity entity) {
 //        return entity.getStack(0).getItem() == ModFluids.SOAP_WATER_BUCKET;
 //    }
 //
@@ -325,20 +340,20 @@ public class LanthanumRefinerBlockEntity extends BlockEntity implements Extended
 //    }
 //
 //
-//    private static void extractEnergy(LanthanumRefinerBlockEntity entity) {
-//        try (Transaction transaction = Transaction.openOuter()) {
-//            entity.energyStorage.extract(32, transaction);
-//            transaction.commit();
-//        }
-//    }
-//
-//    private static boolean hasEnoughEnergy(LanthanumRefinerBlockEntity entity) {
-//        return entity.energyStorage.amount >= 32 * (entity.maxProgress - entity.progress);
-//    }
-//
-//    private static boolean hasEnergyItem(LanthanumRefinerBlockEntity entity) {
-//        return entity.getStack(0).getItem() == ModItems.RUBY;
-//    }
+    private static void extractEnergy(LanthanumRefinerBlockEntity entity) {
+        try (Transaction transaction = Transaction.openOuter()) {
+            entity.energyStorage.extract(32, transaction);
+            transaction.commit();
+        }
+    }
+
+    private static boolean hasEnoughEnergy(LanthanumRefinerBlockEntity entity) {
+        return entity.energyStorage.amount >= 32 * (entity.maxProgress - entity.progress);
+    }
+
+    private static boolean hasEnergyItem(LanthanumRefinerBlockEntity entity) {
+        return entity.getStack(0).getItem() == Items.REDSTONE;
+    }
 
     private static boolean hasRecipe(LanthanumRefinerBlockEntity entity) {
         SimpleInventory inventory = new SimpleInventory(entity.size());
