@@ -15,43 +15,39 @@ Bienvenue dans le Mod Lanthanum ! Ce mod est inspiré de mon affection pour le c
 ![Image](gallery/lanthanum_1.png)
 ![Image](gallery/lanthanum_2.png)
 
-### Pourquoi Créer ce Mod ?
+### Pourquoi créer ce mod ?
 
-J'ai créé ce mod simplement parce que j'ai de l'affection pour le caractère chinois "镧". <br/>
-Je ne suis pas sûr s'il y a d'autres personnes qui partagent le même intérêt, mais si vous l'appréciez, vous êtes les bienvenus pour utiliser ce mod.<br/>
-Même si vous n'avez aucune attache particulière à ce caractère, vous êtes toujours le bienvenu pour utiliser ce mod ; cela ne me dérange pas.<br/>
-Pour votre référence, "镧" est un élément chimique avec le symbole La et le numéro atomique 57.<br/>
-"澜" est un personnage dans le jeu appelé "Arena of Valor."
-
-### Nos Objectifs
-
-Notre objectif est de vous offrir une expérience de jeu unique dans Minecraft tout en rendant hommage à des éléments fascinants de la culture chinoise. Nous nous efforcerons constamment d'améliorer et d'élargir ce mod pour offrir davantage de contenu et de fonctionnalités passionnantes.
-
-Nous vous remercions pour votre soutien et pour l'utilisation du Mod Lanthanum !
-
-Si vous avez des suggestions, des commentaires ou des contributions à offrir, n'hésitez pas à nous contacter.
+La raison pour laquelle j'ai créé ce mod initialement était simplement parce que j'aimais le caractère chinois "镧" (Lanthanum).<br/>
+"澜" est un personnage du jeu "Arena Of Valor".<br/>
+Plus tard, cela intègre également mon affection pour [**IndustrialCraft2**](https://www.curseforge.com/minecraft/mc-mods/industrial-craft) et [**Mekanism**](https://www.curseforge.com/minecraft/mc-mods/mekanism).
 
 ## Mod Lanthanum - Aperçu du Mod
 
-Le **Mod Lanthanum** est un mod Minecraft en constante évolution dédié aux améliorations et aux extensions continues. Le développeur met constamment à jour et améliore le mod pour offrir une expérience de jeu plus captivante et diversifiée. Voici quelques-unes des mises à jour et améliorations récentes :
+- **Nouvelle Dimension** : Le mod introduit une nouvelle dimension, Dimension #14, éliminant complètement les rivières et les océans, remplissant la dimension de blocs de Lanthanum.
 
-- **Mise à jour de la Dimension** : Dans une mise à jour récente, le mod a introduit une nouvelle dimension, la Dimension n°14, en supprimant complètement les rivières et les océans, ajoutant ainsi une nouvelle couche de défi à l'exploration dans le jeu. Ce changement diversifie l'expérience de jeu.
+- **Nouveaux Minéraux et Armes** : Des minéraux de Lanthanum et des minéraux de gemmes sont introduits, ainsi que leurs dérivés et des armes puissantes.
 
-- **Mise à jour des Outils et de la Fabrication de Gemmes** : Le développeur n'a pas seulement mis à jour la version du mod, mais a également peaufiné le processus de fabrication des outils en gemmes, les rendant plus puissants et plus amusants. Cette amélioration ajoute une couche supplémentaire d'excitation et de défi pour les joueurs.
+- **Portail de Lanthanum** : Le mod ajoute un cadre de portail en Lanthanum pour la création de portails. Maintenant, vous pouvez créer des portails similaires à ceux du Nether en utilisant le cadre de portail et de l'eau.
 
-- **Mise à jour de la Génération et du Raffinement des Gemmes** : Le mod a également amélioré la génération et le raffinement des gemmes, dans le but d'obtenir un meilleur équilibre du jeu et une jouabilité améliorée.
+- **Système d'Énergie** : Le mod s'intègre sans problème avec le mod RebornCore, introduisant un solide système d'énergie. Pour tirer pleinement parti du potentiel du mod, [**Reborn Core**](https://www.curseforge.com/minecraft/mc-mods/reborncore) est maintenant une condition préalable obligatoire.
 
-- **Mise à jour de la Famille d'Armes** : Cette mise à jour comprend également des améliorations de la famille d'armes en gemmes, offrant aux joueurs plus de choix et de variété.
+- **Compatibilité avec les Mods** : Avec RebornCore fournissant un cadre énergétique stable, la compatibilité avec les générateurs et les mécanismes de transmission d'énergie du mod [**TechReborn**](https://www.curseforge.com/minecraft/mc-mods/techreborn) est garantie.
 
-- **Mise à jour de la Dimension** : Des mises à jour ont été apportées à la dimension, et les caractéristiques de la nouvelle dimension ont été corrigées. Désormais, la dimension est remplie de blocs de lanthanum.
+- **Fonctionnalité du Raffineur** : Le raffineur peut désormais produire le double du rendement pour les minerais de Lanthanum et les gemmes. Il peut être alimenté en continu avec du redstone ou d'autres générateurs compatibles provenant de mods différents, offrant un processus de raffinage plus souple et plus efficace.
 
-- **Ajout du Portail de Lanthanum** : Un Portail de Lanthanum a été ajouté au mod. Désormais, vous pouvez utiliser des blocs de lanthanum et de l'eau pour créer un portail similaire au Nether.
+Le mod Lanthanum est un excellent ajout axé sur la technologie. N'hésitez pas à fournir des commentaires, des suggestions ou à demander à être collaborateur pour améliorer davantage et contribuer à ce projet.
 
-- **Ajout d'outils et de la famille de Lanthanum** : Des minerais de lanthanum et des outils ont été ajoutés, et la génération des minerais dans la nature ainsi que leur fabrication ont été implémentées.
+## Mod Lanthanum - Objectifs
 
-Ces mises à jour reflètent le Mod Lanthanum en tant que projet activement entretenu et en constante évolution, conçu pour offrir aux joueurs de Minecraft une expérience de jeu plus passionnante. L'accent du développeur va au-delà des améliorations de fonctionnalités, mettant l'accent sur le respect des normes de développement pour assurer la qualité et la cohérence du code.
+- **Plus de Minéraux** : Lanthanum prévoit d'offrir jusqu'à 64 fois la multiplication des minéraux à l'avenir, cela peut sembler ambitieux, mais cela nécessite plus d'énergie pour les opérations.
 
-Si vous avez un intérêt pour les gemmes, de nouvelles dimensions et plus de contenu passionnant dans l'univers de Minecraft, le Mod Lanthanum se présente comme un excellent choix. N'hésitez pas à fournir des commentaires, des suggestions ou à postuler pour devenir contributeur afin d'améliorer et de contribuer davantage à ce projet.
+## Mod Lanthanum - Dépendances et Collaborations
+
+### Dépendances
+- [**Reborn Core**](https://www.curseforge.com/minecraft/mc-mods/reborncore) : Le mod s'intègre sans problème avec RebornCore, introduisant un puissant système d'énergie.
+
+### Collaborations
+- [**TechReborn**](https://www.curseforge.com/minecraft/mc-mods/techreborn) : Le mod est compatible avec TechReborn, permettant la compatibilité avec les générateurs et les mécanismes de transmission d'énergie de TechReborn.
 
 ## Contribuer
 

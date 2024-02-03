@@ -17,41 +17,37 @@ Welcome to the Lanthanum Mod! This mod is inspired by my fondness for the Chines
 
 ### Why Create This Mod?
 
-I created this mod simply because I have an affection for the Chinese character "镧." <br/>
-I'm not sure if there are others who share the same interest, but if you appreciate it, you are welcome to use this mod.<br/>
-Even if you have no particular attachment to this character, you are still welcome to use this mod; I don't mind.<br/>
-For your reference, "镧" is a chemical element with the symbol La and atomic number 57.<br/>
-"澜" is a character in the game called "Arena of Valor."
-
-### Our Goals
-
-Our goal is to provide you with a unique gaming experience in Minecraft while paying homage to fascinating elements of Chinese culture. We will continually strive to enhance and expand this mod to offer more exciting content and features.
-
-Thank you for your support and for using the Lanthanum Mod!
-
-If you have any suggestions, feedback, or contributions to offer, please feel free to get in touch with us.
+The reason I created this mod initially was simply because I liked the Chinese character "镧" (Lanthanum).<br/>
+"澜" is a character from the game "Arena Of Valor."<br/>
+Later, it also incorporates my fondness for [**IndustrialCraft2**](https://www.curseforge.com/minecraft/mc-mods/industrial-craft) and [**Mekanism**](https://www.curseforge.com/minecraft/mc-mods/mekanism).
 
 ## Lanthanum Mod - Mod Overview
 
-**Lanthanum Mod** is an ever-evolving Minecraft mod dedicated to continuous improvements and expansions. The developer constantly updates and enhances the mod to provide a more engaging and diverse gaming experience. Here are some of the recent updates and improvements:
+- **New Dimension**: The mod introduces a new dimension, Dimension #14, completely removing rivers and oceans, filling the dimension with Lanthanum blocks.
 
-- **Dimension Update**: In a recent update, the mod introduced a new dimension, Dimension #14, removing rivers and oceans entirely, adding a fresh layer of challenge to exploration in the game. This change diversifies the gameplay experience.
+- **New Ores and Weapons**: Lanthanum ore and gemstone ore are introduced along with their derivatives and powerful weapons.
 
-- **Gemstone Tools and Crafting Update**: Not only did the developer upgrade the mod's version, but they also refined the crafting process for gemstone tools, making them more powerful and enjoyable. This enhancement adds an extra layer of excitement and challenge for players.
+- **Lanthanum Portal**: The mod adds a Lanthanum-made portal frame for portal creation. Now, you can create portals similar to Nether portals using the portal frame and water.
 
-- **Gemstone Generation and Refinement Update**: The mod also improved the generation and refinement of gemstones, aiming to achieve better game balance and gameplay.
+- **Energy System**: The mod seamlessly integrates with the RebornCore mod, introducing a robust energy system. To fully unleash the mod's potential, [**Reborn Core**](https://www.curseforge.com/minecraft/mc-mods/reborncore) is now a mandatory prerequisite.
 
-- **Weapon Family Update**: The update also includes enhancements to the Gemstone weapon family, providing players with more choices and variety.
+- **Mod Compatibility**: With RebornCore providing a stable energy framework, compatibility is ensured with the generators and energy transmission mechanisms of the [**TechReborn**](https://www.curseforge.com/minecraft/mc-mods/techreborn) mod.
 
-- **Update the dimension**: Updates were made to the dimension, and features of the new dimension were fixed. Now the dimension is full of lanthanum_block.
+- **Refiner Functionality**: The Refiner can now yield double output for Lanthanum and gemstone ores. It can be powered continuously with redstone or other compatible generators from different mods, providing a more flexible and efficient refining process.
 
-- **Add Lanthanum Portal**: A Lanthanum Portal was added to the mod. Now you can use lanthanum_block and water to create a Portal like the Nether Portal.
+The Lanthanum mod is an excellent tech-oriented addition. Feel free to provide feedback, suggestions, or apply to become a contributor to further enhance and contribute to this project.
 
-- **Add lanthanum tools and family**: Lanthanum ore and tools were added, and ore generation in nature and crafting was implemented.
+## Lanthanum Mod - Goals
 
-These updates reflect Lanthanum Mod as an actively maintained and ever-evolving project designed to offer Minecraft players a more thrilling gaming experience. The developer's focus extends beyond feature improvements, emphasizing the maintenance of development standards to ensure code quality and consistency.
+- **More Ores**: Lanthanum plans to offer up to 64 times ore multiplication in the future, sounding ambitious, but it requires more energy for operations.
 
-If you have an interest in gemstones, new dimensions, and more exciting content within the Minecraft universe, Lanthanum Mod presents itself as an excellent choice. Feel free to provide feedback, suggestions, or apply to become a contributor to further enhance and contribute to this project.
+## Lanthanum Mod - Dependencies and Collaborations
+
+### Dependencies
+- [**Reborn Core**](https://www.curseforge.com/minecraft/mc-mods/reborncore): The mod seamlessly integrates with RebornCore, introducing a powerful energy system.
+
+### Collaborations
+- [**TechReborn**](https://www.curseforge.com/minecraft/mc-mods/techreborn): The mod is compatible with TechReborn, allowing compatibility with TechReborn's generators and energy transmission mechanisms.
 
 ## Contributing
 
@@ -66,7 +62,7 @@ We welcome contributions to this project. To ensure a smooth and efficient devel
   - Provide a clear and concise description of your changes.
   - Include relevant tests if applicable.
   - Do not make changes to the `gradle.properties` file.
-  - Do not change the master branch directly.
+  - Do not change the master branch and alpha branch directly.
 
   ### Branch Workflow
 
@@ -74,7 +70,7 @@ We welcome contributions to this project. To ensure a smooth and efficient devel
   1. Create a new branch for your contribution.
   2. Name your branch descriptively.
   3. Make your changes in the branch.
-  4. Submit a pull request to the `master` branch for review.
+  4. Submit a pull request to the `feature` branch for review.
   5. Your changes will be merged after approval and passing necessary tests.
 
 By contributing to this project, you agree to license your code under the MIT License.

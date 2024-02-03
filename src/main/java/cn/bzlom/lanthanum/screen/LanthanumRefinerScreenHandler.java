@@ -2,6 +2,7 @@ package cn.bzlom.lanthanum.screen;
 
 //import cn.bzlom.lanthanum.util.FluidStack;
 
+import cn.bzlom.lanthanum.block.entity.LanthanumRefinerBlockEntity;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
@@ -17,7 +18,7 @@ import net.minecraft.screen.slot.Slot;
 public class LanthanumRefinerScreenHandler extends ScreenHandler {
     private final Inventory inventory;
     private final PropertyDelegate propertyDelegate;
-//    public final LanthanumRefinerBlockEntity blockEntity;
+    public final LanthanumRefinerBlockEntity blockEntity;
 //    public FluidStack fluidStack;
 
 
@@ -31,7 +32,7 @@ public class LanthanumRefinerScreenHandler extends ScreenHandler {
         this.inventory = inventory;
         inventory.onOpen(playerInventory.player);
         this.propertyDelegate = delegate;
-//        this.blockEntity = (LanthanumRefinerBlockEntity) entity;
+        this.blockEntity = (LanthanumRefinerBlockEntity) entity;
 //        this.fluidStack = new FluidStack(blockEntity.fluidStorage.variant,blockEntity.fluidStorage.amount);
 
         this.addSlot(new Slot(inventory, 0, 12, 15));
