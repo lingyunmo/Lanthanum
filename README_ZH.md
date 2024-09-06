@@ -8,6 +8,7 @@ _# 使用 Fabric 的 Minecraft 模组
 - [Français (French)](README_FR.md)
 - [日本語 (Japanese)](README_JA.md)
 - [Español (Spanish)](README_ES.md)
+- [한국어 (Korean)](README_KO.md)
 
 ## 关于 Lanthanum 模组
 

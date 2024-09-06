@@ -8,6 +8,7 @@
 - [Français (French)](README_FR.md)
 - [日本語 (Japanese)](README_JA.md)
 - [Español (Spanish)](README_ES.md)
+- [한국어 (Korean)](README_KO.md)
 
 ## Acerca del Mod Lanthanum
 
