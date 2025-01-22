@@ -1,9 +1,11 @@
 name: Publisher
- 
+
 on:
   push:
     branches:
       - master
+    paths:
+      - 'gradle.properties'
   workflow_dispatch:
 
 env:
@@ -20,34 +22,34 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Check Environment Variables
+      - name: Check Environment Variables (检查环境变量)
         run: env
 
-      - name: Checkout Repository
-        uses: actions/checkout@v3
+      - name: Checkout Repository (检出代码库)
+        uses: actions/checkout@v4
         with:
           submodules: true
 
-      - name: Setup Java
-        uses: actions/setup-java@v2
+      - name: Setup Java (设置 Java 环境)
+        uses: actions/setup-java@v4.6.0
         with:
           distribution: "temurin"
           java-version: 17
 
-      - name: Make Gradle Wrapper Executable
+      - name: Make Gradle Wrapper Executable (使 Gradle Wrapper 可执行)
         if: ${{ runner.os != 'Windows' }}
         run: chmod +x ./gradlew
 
-      - name: Read Version from gradle.properties
+      - name: Read Version from gradle.properties (从 gradle.properties 文件读取版本)
         run: |
           VERSION=$(grep 'mod_version' gradle.properties | awk -F'=' '{print $2}' | xargs)
           echo "VERSION=$VERSION" >> $GITHUB_ENV
 
-      - name: Build
+      - name: Build (构建)
         run: ./gradlew clean build
-        
+
       - name: Publish (CurseForge/Modrinth/GitHub)
-        uses: Kir-Antipov/mc-publish@v3.3                                   
+        uses: Kir-Antipov/mc-publish@v3.3
         with:
           curseforge-id: 932542
           curseforge-token: "${{env.CURSEFORGE_TOKEN}}"
@@ -55,10 +57,10 @@ jobs:
           modrinth-id: PuvRflQn
           modrinth-token: "${{env.MODRINTH_TOKEN}}"
           
-          github-tag: "v${{env.VERSION}}"
+          github-tag: "v${{env.VERSION}}-${{ env.MINECRAFT_VERSION }}"
           github-token: "${{env.GITHUB_TOKEN}}"
 
-          name: "Lanthanum-fabric-${{ env.MINECRAFT_VERSION }}-${{ env.VERSION }}"
+          name: "${{ env.MINECRAFT_VERSION }}-fabric-${{ env.VERSION }}"
           version: "${{ env.VERSION }}"
           version-type: release
 
