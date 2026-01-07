@@ -1,0 +1,75 @@
+name: Publisher (Release)
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'gradle.properties'
+  workflow_dispatch:
+
+env:
+  MINECRAFT_VERSION: 1.20.1
+  MOD_JAVA_VERSION: 17
+
+  MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
+  CURSEFORGE_TOKEN: ${{ secrets.CURSEFORGE_TOKEN }}
+  GITHUB_TOKEN: ${{ secrets.PUBLISH_GITHUB_TOKEN }}
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Validate Gradle Wrapper
+        uses: gradle/wrapper-validation-action@v3
+
+      - name: Setup JDK 21 (For Build)
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: 21
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v3
+
+      - name: Make Gradle Wrapper Executable
+        run: chmod +x ./gradlew
+
+      - name: Read Version from gradle.properties
+        run: |
+          VERSION=$(grep 'mod_version' gradle.properties | awk -F'=' '{print $2}' | xargs)
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+
+      - name: Build
+        run: ./gradlew build
+
+      - name: Publish (CurseForge/Modrinth/GitHub)
+        uses: Kir-Antipov/mc-publish@v3.3
+        with:
+          curseforge-id: 932542
+          curseforge-token: "${{ env.CURSEFORGE_TOKEN }}"
+          modrinth-id: PuvRflQn
+          modrinth-token: "${{ env.MODRINTH_TOKEN }}"
+          github-token: "${{ env.GITHUB_TOKEN }}"
+
+          name: "v${{ env.VERSION }} (${{ env.MINECRAFT_VERSION }})"
+          version: "${{ env.VERSION }}"
+          version-type: release
+
+          files: |
+            fabric/build/libs/!(*-dev|*-sources|*-shadow).jar
+            forge/build/libs/!(*-dev|*-sources|*-shadow).jar
+
+          loaders: |
+            fabric
+            forge
+
+          game-versions: "${{ env.MINECRAFT_VERSION }}"
+
+          java: "${{ env.MOD_JAVA_VERSION }}"

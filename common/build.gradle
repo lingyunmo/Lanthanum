@@ -1,0 +1,15 @@
+architectury {
+    common(rootProject.enabled_platforms.split(","))
+}
+
+loom {
+    accessWidenerPath = file("src/main/resources/lanthanum.accesswidener")
+}
+
+dependencies {
+    // Architectury API
+    modImplementation "dev.architectury:architectury:${rootProject.architectury_api_version}"
+
+    // Botarium
+    modImplementation "maven.modrinth:botarium:${rootProject.botarium_version}"
+}

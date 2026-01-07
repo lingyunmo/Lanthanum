@@ -1,0 +1,20 @@
+# Gradle 缓存和构建产物
+.gradle/
+build/
+out/
+*.ipr
+*.iws
+*.iml
+.idea/
+
+# Minecraft 运行时生成的垃圾文件
+run/
+runClient/
+runServer/
+logs/
+crash-reports/
+/fabric/run/
+/forge/run/
+
+# macOS 系统垃圾
+.DS_Store
