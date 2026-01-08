@@ -11,7 +11,7 @@ jobs:
   build:
     strategy:
       matrix:
-        java: [ 21 ]
+        java: [ 17 ]
         os: [ ubuntu-22.04, windows-2022 ]
 
     runs-on: ${{ matrix.os }}
@@ -39,7 +39,7 @@ jobs:
         run: chmod +x ./gradlew
 
       - name: Build
-        run: ./gradlew build
+        run: ./gradlew build --stacktrace
 
       - name: Capture Build Artifacts
         if: ${{ runner.os == 'Linux' }}
