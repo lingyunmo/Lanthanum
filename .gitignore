@@ -1,13 +1,23 @@
-# Gradle 缓存和构建产物
+# Gradle cache and build output
 .gradle/
 build/
 out/
+bin/
+*.jar
+*.zip
+*.log
+
+# IDE
 *.ipr
 *.iws
 *.iml
 .idea/
+.vscode/
+*.swp
+*.swo
+*~
 
-# Minecraft 运行时生成的垃圾文件
+# Minecraft runtime
 run/
 runClient/
 runServer/
@@ -15,6 +25,18 @@ logs/
 crash-reports/
 /fabric/run/
 /forge/run/
+/common/run/
 
-# macOS 系统垃圾
+# Generated changelog
+CHANGELOG.md
+
+# Python
+__pycache__/
+*.pyc
+
+# OS
 .DS_Store
+Thumbs.db
+
+/reference/
+/scripts/

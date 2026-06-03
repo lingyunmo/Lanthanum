@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "lanthanum:block/crystallizer"
+    },
+    "facing=east": {
+      "model": "lanthanum:block/crystallizer",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "lanthanum:block/crystallizer",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "lanthanum:block/crystallizer",
+      "y": 270
+    }
+  }
+}

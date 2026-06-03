@@ -1,0 +1,12 @@
+{
+  "type": "lanthanum:machine_recipe",
+  "ingredient": {
+    "tag": "forge:ores/gold"
+  },
+  "result": {
+    "item": "lanthanum:gold_dust",
+    "count": 2
+  },
+  "processingTime": 200,
+  "energyCost": 6400
+}

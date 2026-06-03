@@ -1,4 +1,33 @@
 {
-  "item.lanthanum.lanthanum_rotten_flesh": "Lanthanum Rotten Flesh",
-  "itemGroup.lanthanum.main": "Lanthanum Dynamics"
+  "itemGroup.lanthanum.base": "Lanthanum - Materials",
+  "itemGroup.lanthanum.machines": "Lanthanum - Machines",
+
+  "block.lanthanum.lanthanum_ore": "Lanthanum Ore",
+  "block.lanthanum.deepslate_lanthanum_ore": "Deepslate Lanthanum Ore",
+  "block.lanthanum.lanthanum_block": "Block of Lanthanum",
+  "block.lanthanum.crusher": "Crusher",
+  "block.lanthanum.ore_washer": "Ore Washer",
+  "block.lanthanum.crystallizer": "Crystallizer",
+
+  "item.lanthanum.raw_lanthanum": "Raw Lanthanum",
+  "item.lanthanum.lanthanum_ingot": "Lanthanum Ingot",
+  "item.lanthanum.lanthanum_dust": "Lanthanum Dust",
+  "item.lanthanum.washed_lanthanum_dust": "Washed Lanthanum Dust",
+  "item.lanthanum.lanthanum_crystal": "Lanthanum Crystal",
+  "item.lanthanum.iron_dust": "Iron Dust",
+  "item.lanthanum.washed_iron_dust": "Washed Iron Dust",
+  "item.lanthanum.iron_crystal": "Iron Crystal",
+  "item.lanthanum.gold_dust": "Gold Dust",
+  "item.lanthanum.washed_gold_dust": "Washed Gold Dust",
+  "item.lanthanum.gold_crystal": "Gold Crystal",
+  "item.lanthanum.copper_dust": "Copper Dust",
+  "item.lanthanum.washed_copper_dust": "Washed Copper Dust",
+  "item.lanthanum.copper_crystal": "Copper Crystal",
+  "item.lanthanum.upgrade_speed_card": "Speed Upgrade Card",
+  "item.lanthanum.upgrade_efficiency_card": "Efficiency Upgrade Card",
+  "item.lanthanum.upgrade_output_card": "Output Upgrade Card",
+
+  "tooltip.lanthanum.upgrade_card.speed": "Halves processing time (2x speed)",
+  "tooltip.lanthanum.upgrade_card.efficiency": "Reduces machine energy consumption by 40%",
+  "tooltip.lanthanum.upgrade_card.output": "25% chance of bonus output per craft"
 }

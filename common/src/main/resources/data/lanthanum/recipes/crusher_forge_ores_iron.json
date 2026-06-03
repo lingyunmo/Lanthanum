@@ -1,0 +1,12 @@
+{
+  "type": "lanthanum:machine_recipe",
+  "ingredient": {
+    "tag": "forge:ores/iron"
+  },
+  "result": {
+    "item": "minecraft:raw_iron",
+    "count": 2
+  },
+  "processingTime": 200,
+  "energyCost": 6400
+}

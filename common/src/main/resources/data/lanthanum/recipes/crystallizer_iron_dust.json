@@ -1,0 +1,12 @@
+{
+  "type": "lanthanum:machine_recipe",
+  "ingredient": {
+    "item": "lanthanum:washed_iron_dust"
+  },
+  "result": {
+    "item": "lanthanum:iron_crystal",
+    "count": 2
+  },
+  "processingTime": 300,
+  "energyCost": 19200
+}

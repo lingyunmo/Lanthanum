@@ -1,0 +1,12 @@
+{
+  "type": "lanthanum:machine_recipe",
+  "ingredient": {
+    "tag": "forge:raw_materials/gold"
+  },
+  "result": {
+    "item": "minecraft:raw_gold",
+    "count": 2
+  },
+  "processingTime": 200,
+  "energyCost": 6400
+}

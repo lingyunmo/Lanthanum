@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "lanthanum:block/crusher"
+    },
+    "facing=east": {
+      "model": "lanthanum:block/crusher",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "lanthanum:block/crusher",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "lanthanum:block/crusher",
+      "y": 270
+    }
+  }
+}

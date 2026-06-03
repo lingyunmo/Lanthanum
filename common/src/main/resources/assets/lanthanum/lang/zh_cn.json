@@ -1,4 +1,33 @@
 {
-  "item.lanthanum.lanthanum_rotten_flesh": "镧腐肉",
-  "itemGroup.lanthanum.main": "镧动力学"
+  "itemGroup.lanthanum.base": "镧 - 基础材料",
+  "itemGroup.lanthanum.machines": "镧 - 机器",
+
+  "block.lanthanum.lanthanum_ore": "镧矿石",
+  "block.lanthanum.deepslate_lanthanum_ore": "深层镧矿石",
+  "block.lanthanum.lanthanum_block": "镧块",
+  "block.lanthanum.crusher": "粉碎机",
+  "block.lanthanum.ore_washer": "洗矿机",
+  "block.lanthanum.crystallizer": "结晶器",
+
+  "item.lanthanum.raw_lanthanum": "粗镧",
+  "item.lanthanum.lanthanum_ingot": "镧锭",
+  "item.lanthanum.lanthanum_dust": "镧粉",
+  "item.lanthanum.washed_lanthanum_dust": "洗净镧粉",
+  "item.lanthanum.lanthanum_crystal": "镧晶体",
+  "item.lanthanum.iron_dust": "铁粉",
+  "item.lanthanum.washed_iron_dust": "洗净铁粉",
+  "item.lanthanum.iron_crystal": "铁晶体",
+  "item.lanthanum.gold_dust": "金粉",
+  "item.lanthanum.washed_gold_dust": "洗净金粉",
+  "item.lanthanum.gold_crystal": "金晶体",
+  "item.lanthanum.copper_dust": "铜粉",
+  "item.lanthanum.washed_copper_dust": "洗净铜粉",
+  "item.lanthanum.copper_crystal": "铜晶体",
+  "item.lanthanum.upgrade_speed_card": "速度升级卡",
+  "item.lanthanum.upgrade_efficiency_card": "节能升级卡",
+  "item.lanthanum.upgrade_output_card": "增产升级卡",
+
+  "tooltip.lanthanum.upgrade_card.speed": "加工时间减半（2 倍速）",
+  "tooltip.lanthanum.upgrade_card.efficiency": "机器能耗降低 40%",
+  "tooltip.lanthanum.upgrade_card.output": "每次加工有 25% 概率额外产出"
 }

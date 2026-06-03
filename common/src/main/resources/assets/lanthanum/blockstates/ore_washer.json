@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "lanthanum:block/ore_washer"
+    },
+    "facing=east": {
+      "model": "lanthanum:block/ore_washer",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "lanthanum:block/ore_washer",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "lanthanum:block/ore_washer",
+      "y": 270
+    }
+  }
+}

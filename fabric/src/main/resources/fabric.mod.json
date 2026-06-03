@@ -3,36 +3,32 @@
   "id": "lanthanum",
   "version": "${version}",
   "name": "Lanthanum",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "description": "Industrial ore processing mod for Minecraft 1.20.1. Achieve 16x+ ore multiplication through a two-stage processing chain.",
   "authors": [
-    "Me!"
+    "lingyunmo"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://github.com/lingyunmo/Lanthanum",
+    "sources": "https://github.com/lingyunmo/Lanthanum",
+    "issues": "https://github.com/lingyunmo/Lanthanum/issues"
   },
-  "license": "CC0-1.0",
+  "license": "MIT",
   "icon": "assets/lanthanum/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "cn.bzlom.fabric.ExampleModFabric"
+      "cn.bzlom.lanthanum.fabric.LanthanumFabric"
     ],
     "client": [
-      "cn.bzlom.fabric.client.ExampleModFabricClient"
+      "cn.bzlom.lanthanum.fabric.client.LanthanumFabricClient"
     ]
   },
-  "mixins": [
-    "lanthanum.mixins.json"
-  ],
   "depends": {
-    "fabricloader": ">=0.18.4",
+    "fabricloader": ">=0.16.0",
     "minecraft": "~1.20.1",
     "java": ">=17",
     "architectury": ">=9.2.14",
-    "fabric-api": "*"
-  },
-  "suggests": {
-    "another-mod": "*"
+    "fabric-api": "*",
+    "botarium": ">=2.3.3"
   }
 }

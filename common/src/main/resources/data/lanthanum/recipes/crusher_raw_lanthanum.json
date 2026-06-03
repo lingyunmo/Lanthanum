@@ -1,0 +1,12 @@
+{
+  "type": "lanthanum:machine_recipe",
+  "ingredient": {
+    "item": "lanthanum:raw_lanthanum"
+  },
+  "result": {
+    "item": "lanthanum:lanthanum_dust",
+    "count": 2
+  },
+  "processingTime": 200,
+  "energyCost": 6400
+}

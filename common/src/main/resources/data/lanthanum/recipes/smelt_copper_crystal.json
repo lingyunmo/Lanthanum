@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "lanthanum:copper_crystal"
+  },
+  "result": "minecraft:copper_ingot",
+  "experience": 0.5,
+  "cookingtime": 200
+}

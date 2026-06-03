@@ -1,18 +1,17 @@
-name: Build_master
+name: Build (CI)
+
 on:
   pull_request:
-    branches:
-      - master
+    branches: [master]
   push:
-    branches:
-      - master
+    branches: [master]
 
 jobs:
   build:
     strategy:
       matrix:
-        java: [ 17 ]
-        os: [ ubuntu-22.04, windows-2022 ]
+        java: [17]
+        os: [ubuntu-22.04, windows-2022]
 
     runs-on: ${{ matrix.os }}
 
@@ -35,17 +34,30 @@ jobs:
           cache-read-only: ${{ github.ref != 'refs/heads/master' }}
 
       - name: Make Gradle Wrapper Executable
-        if: ${{ runner.os == 'Linux' }}
+        if: runner.os == 'Linux'
         run: chmod +x ./gradlew
 
       - name: Build
         run: ./gradlew build --stacktrace
 
-      - name: Capture Build Artifacts
-        if: ${{ runner.os == 'Linux' }}
+      - name: Capture Fabric Artifact
+        if: runner.os == 'Linux'
         uses: actions/upload-artifact@v4
         with:
-          name: Artifacts
+          name: lanthanum-fabric-${{ github.sha }}
           path: |
-            fabric/build/libs/!(*-dev|*-sources|*-shadow).jar
-            forge/build/libs/!(*-dev|*-sources|*-shadow).jar
+            fabric/build/libs/*.jar
+            !fabric/build/libs/*-dev-shadow.jar
+            !fabric/build/libs/*-sources.jar
+          retention-days: 7
+
+      - name: Capture Forge Artifact
+        if: runner.os == 'Linux'
+        uses: actions/upload-artifact@v4
+        with:
+          name: lanthanum-forge-${{ github.sha }}
+          path: |
+            forge/build/libs/*.jar
+            !forge/build/libs/*-dev-shadow.jar
+            !forge/build/libs/*-sources.jar
+          retention-days: 7
